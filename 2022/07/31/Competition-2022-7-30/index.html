@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Competition-2022/7/30 - Better_OIer&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="T1题目描述小明有一个正整数$n$，小明把它用汉字写出来。 但是小明比较笨，不会写正整数格式，只会把每一位写成汉字。"><meta property="og:type" content="blog"><meta property="og:title" content="Competition-2022/7/30"><meta property="og:url" content="http://betteroier.github.io/2022/07/31/Competition-2022-7-30/"><meta property="og:site_name" content="Better_OIer&#039;s Blog"><meta property="og:description" content="T1题目描述小明有一个正整数$n$，小明把它用汉字写出来。 但是小明比较笨，不会写正整数格式，只会把每一位写成汉字。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://s1.ax1x.com/2022/07/31/vFwCCV.jpg"><meta property="article:published_time" content="2022-07-31T11:26:19.000Z"><meta property="article:modified_time" content="2022-07-31T12:16:39.762Z"><meta property="article:author" content="Better_OIer"><meta property="article:tag" content="比赛"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://s1.ax1x.com/2022/07/31/vFwCCV.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.github.io/2022/07/31/Competition-2022-7-30/"},"headline":"Competition-2022/7/30","image":["https://s1.ax1x.com/2022/07/31/vFwCCV.jpg"],"datePublished":"2022-07-31T11:26:19.000Z","dateModified":"2022-07-31T12:16:39.762Z","author":{"@type":"Person","name":"Better_OIer"},"publisher":{"@type":"Organization","name":"Better_OIer's Blog","logo":{"@type":"ImageObject","url":"http://betteroier.github.io/2022/07/31/Competition-2022-7-30/image/head_logo.png"}},"description":"T1题目描述小明有一个正整数$n$，小明把它用汉字写出来。 但是小明比较笨，不会写正整数格式，只会把每一位写成汉字。"}</script><link rel="canonical" href="http://betteroier.github.io/2022/07/31/Competition-2022-7-30/"><link rel="icon" href="/image/site_logo.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Noto+Sans+SC:wght@400;700"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Better_OIer&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">存档</a><a class="navbar-item" href="/categories">目录</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://s1.ax1x.com/2022/07/31/vFwCCV.jpg" alt="Competition-2022/7/30"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-07-31T11:26:19.000Z" title="2022/7/31 19:26:19">2022-07-31</time>发表</span><span class="level-item"><time dateTime="2022-07-31T12:16:39.762Z" title="2022/7/31 20:16:39">2022-07-31</time>更新</span><span class="level-item">15 分钟读完 (大约2188个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Competition-2022/7/30</h1><div class="content"><h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明有一个正整数$n$，小明把它用汉字写出来。 但是小明比较笨，不会写正整数格式，只会把每一位写成汉字。</p>
+<span id="more"></span>
+<p>比如说，小明会把$324$写成“三二四”，而不是“三百二十四”。</p>
+<p>接下来，小明比较无聊，他会数出他写出的这些字的笔画总数，作为新的$n$，然后重新开始这个过程。</p>
+<p>现在已经知道小明一开始的正整数$n$，并且已知他会把这个过程进行$n$次。请你求出他第$k$次写下的所有字的笔画数，以帮助小明验证自己的答案。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行一个正整数$T$，表示数据组数。</p>
+<p>接下来$T$行，每行两个正整数$n,k$。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>$T$行，每行一个正整数，表示答案。</p>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入-1"><a href="#输入-1" class="headerlink" title="输入 #1"></a>输入 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">234 2</span><br><span class="line">102 3</span><br><span class="line">111 2</span><br><span class="line">394 1</span><br></pre></td></tr></table></figure>
+<h4 id="输出-1"><a href="#输出-1" class="headerlink" title="输出 #1"></a>输出 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">14</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+<h4 id="输入-2"><a href="#输入-2" class="headerlink" title="输入 #2"></a>输入 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">1 1</span><br><span class="line">2 1</span><br><span class="line">3 1</span><br><span class="line">4 1</span><br><span class="line">5 1</span><br><span class="line">6 1</span><br><span class="line">7 1</span><br><span class="line">8 1</span><br><span class="line">9 1</span><br></pre></td></tr></table></figure>
+<h4 id="输出-2"><a href="#输出-2" class="headerlink" title="输出 #2"></a>输出 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">4</span><br><span class="line">4</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="说明-x2F-提示"><a href="#说明-x2F-提示" class="headerlink" title="说明&#x2F;提示"></a>说明&#x2F;提示</h3><p>样例 #1 解释如下：</p>
+<p>对第一组数据，小明第一次会写下“二三四”，共 10 画；第二次会写下“一零”，共 14 画（“零”有 13 画）。<br>对第二组数据，小明第一次会写下“一零二”，共 16 画；第二次会写下“一六“，共 5 画；第三次会写下“五”，共四画。<br>对第三组数据，小明第一次会写下“一一一”，共 3 画；第二次会写下“三”，共 3 画。<br>对第四组数据，小明第一次会写下“三九四”，共 10 画。  </p>
+<p>样例 #2 提供了 1…9 的每个数的汉字笔画数。而“零”共有 13 画。</p>
+<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>对 30% 的数据，$n \leq 1000, k \leq 2$。</p>
+<p>对 70% 的数据，$n \leq 10^9, k \leq 1000$。</p>
+<p>对 100% 的数据，$n \leq 10^{18}, k \leq 10^9, T \leq 500$。</p>
+<hr>
+<h1 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h1><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>小北写了一份 <code>thoypn</code> 语言代码。</p>
+<p><code>thoypn</code> 语言代码里只有两种语句：输出语句和循环语句。</p>
+<p>而且 <code>thoypn</code> 语言类似 <code>python</code> 语言，用缩进来决定语法：</p>
+<ol>
+<li>每一行只能写一条语句。</li>
+<li>如果某条循环语句前面有 n 个 tab 的缩进，那么他后面至少一行要有大于等于 n + 1 个 tab 的缩进，这些行就是这条循环语句的循环体。而且他后面一行必须恰好有 n + 1个 tab 的缩进，不能多不能少。</li>
+<li>不能凭空出现缩进，也就是说输出语句后面不能增加缩进。程序的第一行也必须不缩进。<br>由于小北水平不行，他总是忘记加缩进。</li>
+</ol>
+<p>华华想知道，通过给这份代码添加缩进，可以得到多少种不同的合法 <code>thoypn</code> 程序？</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行一个正整数 T，表示数据组数。</p>
+<p>接下来每组数据中：</p>
+<p>第一行一个正整数 n， 表示小北写的数据组数；</p>
+<p>第二行一个长为 n、仅包含 F 和 P 的字符串 s。 如果 s 中第 i 个字符是 F，表示小北写的代码中第 i 行有一条循环语句；反之表示小北写的代码中第 i 行有一条输出语句。  </p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h3><p>对每组数据，输出一行一个正整数，表示答案。由于答案可能很大，你只需要输出对$10^9+7$取模得到的结果</p>
+<h3 id="输入输出样例-1"><a href="#输入输出样例-1" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4</span><br><span class="line">FFFP</span><br><span class="line">4</span><br><span class="line">FPFP</span><br><span class="line">4</span><br><span class="line">FPPP</span><br></pre></td></tr></table></figure>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<h3 id="说明-x2F-提示-1"><a href="#说明-x2F-提示-1" class="headerlink" title="说明&#x2F;提示"></a>说明&#x2F;提示</h3><p>对第一组数据，只有</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span></span><br><span class="line">  <span class="keyword">for</span></span><br><span class="line">    <span class="keyword">for</span></span><br><span class="line">      <span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<p>这一种方案。</p>
+<p>对第二组数据，有</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span></span><br><span class="line">  <span class="built_in">print</span></span><br><span class="line">  <span class="keyword">for</span></span><br><span class="line">    <span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<p>和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span></span><br><span class="line">  <span class="built_in">print</span></span><br><span class="line"><span class="keyword">for</span></span><br><span class="line">  <span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<p>两种方案。</p>
+<p>对第三组数据，循环语句可能包含 1 或者 2 或者 3 条输出语句，因此有三种方案。</p>
+<h3 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h3><p>对 30% 的数据，$n \leq 10$。</p>
+<p>对 50% 的数据，$n \leq 100$。</p>
+<p>另有 20% 的数据，至多有 1010 个 F。</p>
+<p>对 100% 的数据，$T \leq 5, n \leq 1000$。</p>
+<hr>
+<h1 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h1><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>在很久很久以前，有一个王国。王国的国王手下有一些骑士。</p>
+<p>我们把骑士们编号为骑士 1，骑士 2，…，骑士$n$。他们每次都是按照这个顺序出行，因此只有相邻的骑士（即骑士$i$和骑士$i+1$）之间才会认识。</p>
+<p>某天国王需要他们做一件任务。为了做这件任务，骑士们需要分为若干队伍；每个队伍要么只有一名骑士，要么有两名互相认识的骑士（即相邻的骑士）。</p>
+<p>每名骑士被评定了一个能力值。如果一个队伍只有一名骑士，那么队伍能力值就是这名骑士的能力值；如果队伍里有两名骑士，那么队伍能力值就是这两名骑士的能力值的和。</p>
+<p>为了尽可能完成任务，国王需要队伍能力值的极差最小。 即设$A$是所有队伍能力值的最小值$B$是队伍能力值的最大值，则国王需要最小化$B-A$。请你计算出这个最小值。</p>
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行一个正整数$n$，表示骑士的数量。</p>
+<p>第二行$n$个正整数$a_1, \dots, a_n$，其中$a_i$表示第$i$名骑士的能力值。</p>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h3><p>一行一个正整数，表示答案。</p>
+<h3 id="输入输出样例-2"><a href="#输入输出样例-2" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入-1-1"><a href="#输入-1-1" class="headerlink" title="输入 #1"></a>输入 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 2 3 4</span><br></pre></td></tr></table></figure>
+<h4 id="输出-1-1"><a href="#输出-1-1" class="headerlink" title="输出 #1"></a>输出 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<h4 id="输入-2-1"><a href="#输入-2-1" class="headerlink" title="输入 #2"></a>输入 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">8 6 3 4 9 2 7 2 9 3</span><br></pre></td></tr></table></figure>
+<h4 id="输出-2-1"><a href="#输出-2-1" class="headerlink" title="输出 #2"></a>输出 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-x2F-提示-2"><a href="#说明-x2F-提示-2" class="headerlink" title="说明&#x2F;提示"></a>说明&#x2F;提示</h3><p>样例解释：</p>
+<p>对样例 1，可以把骑士$1, 2$划分为一队，骑士$3$和骑士$4$各自分为一队。</p>
+<p>对样例 2，可以$8, 6, [3, 4], [9, 2], [7, 2], [9, 3]$这样分组（方括号括起来的表示分在同一组），队伍能力值分别为$8, 6, 7, 11, 9, 12$，最大值减最小值为$12 - 6 &#x3D; 6$。</p>
+<h3 id="数据范围-2"><a href="#数据范围-2" class="headerlink" title="数据范围"></a>数据范围</h3><p>对 10% 的数据，$n \leq 5$。</p>
+<p>对 20% 的数据，$n \leq 25$。</p>
+<p>对 40% 的数据，$n \leq 100$。</p>
+<p>对 60% 的数据，$n \leq 1000$。</p>
+<p>对 100% 的数据，$3 \leq n \leq 10^5, 1 \leq a_i \leq 10^9$。</p>
+<hr>
+<h1 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h1><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>猫猫（这是一个人名）想要去魔法王国旅游。</p>
+<p>魔法王国有$n$座城市。</p>
+<p>由于魔法王国的人会传送，他们懒得修道路，只建了$n-1$条道路供旅行者通行。每条道路连接两座城市，并且这$n-1$条道路恰好把$n$座城市都连了起来。</p>
+<p>猫猫在旅行前给每座城市评定了一个“魅力值”。她想要多逛一些城市，让自己经过的城市的魅力值总和最大。（即使她多次经过同一座城市，也不会重复计算魅力值）</p>
+<p>但是魔法王国由于某些原因，不允许旅行者通过同一座城经过$k$次，因此猫猫不一定能把所有城市全部经过一遍。 （每进入一次城市就算经过一次，不允许路过城市而不进去）</p>
+<p>请你帮猫猫规划路线，并输出最大的魅力值总和。</p>
+<p>猫猫会从$1$号城市进入魔法王国；首次进入也算一次经过。并且由于魔法王国所有城市中都提供传送到王国外的服务，她不需要最后回到$1$号城市。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行两个正整数$n, k$，表示城市数量，每座城市能经过的次数。</p>
+<p>第二行$n$个正整数$a_1, \dots, a_n$$，其中 $a_k$表示第$k$座城市的魅力值。</p>
+<p>接下来$n-1$行，每行两个正整数$x$和$y$，表示存在一条连接第$x$座城市和第$y$座城市的道路。</p>
+<p>保证这$n-1$条道路一定能把$n$座城市都连接起来。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h3><p>一行一个正整数，表示经过城市的魅力值总和的最大值。</p>
+<h3 id="输入输出样例-3"><a href="#输入输出样例-3" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入-1-2"><a href="#输入-1-2" class="headerlink" title="输入 #1"></a>输入 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 1</span><br><span class="line">5 6 6 4 7 3 9 9 3 9</span><br><span class="line">1 3</span><br><span class="line">2 10</span><br><span class="line">2 3</span><br><span class="line">1 8</span><br><span class="line">1 7</span><br><span class="line">5 2</span><br><span class="line">6 2</span><br><span class="line">3 9</span><br><span class="line">2 4</span><br></pre></td></tr></table></figure>
+<h4 id="输出-1-2"><a href="#输出-1-2" class="headerlink" title="输出 #1"></a>输出 #1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
+<h4 id="输入-2-2"><a href="#输入-2-2" class="headerlink" title="输入 #2"></a>输入 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 2</span><br><span class="line">5 6 6 4 7 3 9 9 3 9</span><br><span class="line">1 3</span><br><span class="line">2 10</span><br><span class="line">2 3</span><br><span class="line">1 8</span><br><span class="line">1 7</span><br><span class="line">5 2</span><br><span class="line">6 2</span><br><span class="line">3 9</span><br><span class="line">2 4</span><br></pre></td></tr></table></figure>
+<h4 id="输出-2-2"><a href="#输出-2-2" class="headerlink" title="输出 #2"></a>输出 #2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">45</span><br></pre></td></tr></table></figure>
+<h4 id="输入-3"><a href="#输入-3" class="headerlink" title="输入 #3"></a>输入 #3</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">30 3</span><br><span class="line">3 88 109 39 83 8 152 172 176 41 151 29 149 151 189 147 125 50 184 117 115 40 195 102 107 176 188 43 67 15</span><br><span class="line">1 4</span><br><span class="line">1 10</span><br><span class="line">1 21</span><br><span class="line">1 27</span><br><span class="line">1 3</span><br><span class="line">2 29</span><br><span class="line">3 6</span><br><span class="line">3 25</span><br><span class="line">3 28</span><br><span class="line">3 5</span><br><span class="line">5 24</span><br><span class="line">7 26</span><br><span class="line">8 30</span><br><span class="line">9 14</span><br><span class="line">9 30</span><br><span class="line">11 15</span><br><span class="line">11 17</span><br><span class="line">11 30</span><br><span class="line">12 16</span><br><span class="line">12 18</span><br><span class="line">13 24</span><br><span class="line">16 19</span><br><span class="line">16 20</span><br><span class="line">16 23</span><br><span class="line">16 26</span><br><span class="line">16 30</span><br><span class="line">18 24</span><br><span class="line">22 28</span><br><span class="line">29 30</span><br></pre></td></tr></table></figure>
+<h4 id="输出-3"><a href="#输出-3" class="headerlink" title="输出 #3"></a>输出 #3</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2667</span><br></pre></td></tr></table></figure>
+
+<h3 id="说明-x2F-提示-3"><a href="#说明-x2F-提示-3" class="headerlink" title="说明&#x2F;提示"></a>说明&#x2F;提示</h3><p>在样例 1 中，可以沿$1, 3, 2, 10$这样的路线走，可以获得$1, 2, 3, 10$四个城市的魅力值，一共为$5 + 6 + 6 + 9 &#x3D; 26$。</p>
+<p>在样例 2 中，可以沿$1, 8, 1, 3, 9, 3, 2, 5, 2, 10$这样的路线走，可以获得$1, 2, 3, 5, 8, 9, 10$七个城市的魅力值，一共为$5 + 6 + 6 + 7 + 9 + 3 + 9 &#x3D; 45$。</p>
+<h3 id="数据范围-3"><a href="#数据范围-3" class="headerlink" title="数据范围"></a>数据范围</h3><table>
+<thead>
+<tr>
+<th>数据占比</th>
+<th>n 的范围</th>
+<th>k 的范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10%</td>
+<td>$n \leq 10$</td>
+<td>$k \leq 10$</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>$n \leq 10^5$</td>
+<td>$k &#x3D; 1$</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>$n \leq 10^5$</td>
+<td>$k &#x3D; 2$</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>$n \leq 1000$</td>
+<td>$k \leq 10^5$</td>
+</tr>
+<tr>
+<td>30%</td>
+<td>$n \leq 10^54$</td>
+<td>$k \leq 10^5$</td>
+</tr>
+</tbody></table>
+<p>对所有数据$a_n \leq 2000$。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Competition-2022/7/30</p><p><a href="http://betteroier.github.io/2022/07/31/Competition-2022-7-30/">http://betteroier.github.io/2022/07/31/Competition-2022-7-30/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Better_OIer</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-07-31</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-07-31</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%AF%94%E8%B5%9B/">比赛</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/07/31/U218941-%E9%A2%98%E8%A7%A3/"><span class="level-item">U218941 题解</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://s1.ax1x.com/2022/07/31/vFwn4x.png" alt="Better_OIer"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Better_OIer</p><p class="is-size-6 is-block">低头是题海，抬头是未来</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>浙江 台州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">2</p></a></div></div></nav></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://www.luogu.com.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">洛谷</span></span><span class="level-right"><span class="level-item tag">www.luogu.com.cn</span></span></a></li><li><a class="level is-mobile" href="https://ac.nowcoder.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">牛客竞赛</span></span><span class="level-right"><span class="level-item tag">ac.nowcoder.com</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-31T11:26:19.000Z">2022-07-31</time></p><p class="title"><a href="/2022/07/31/Competition-2022-7-30/">Competition-2022/7/30</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-31T01:33:13.000Z">2022-07-31</time></p><p class="title"><a href="/2022/07/31/U218941-%E9%A2%98%E8%A7%A3/">U218941 题解</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-31T01:11:22.000Z">2022-07-31</time></p><p class="title"><a href="/2022/07/31/T247910%E9%A2%98%E8%A7%A3/">T247910题解</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%94%E8%B5%9B/"><span class="tag">比赛</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Better_OIer&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Better_OIer</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="My Github" href="https://github.com/betteroier"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "block",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
