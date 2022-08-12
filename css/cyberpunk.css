@@ -11687,17 +11687,6 @@ figure.highlight.foldable div.level-left {
     padding: 1.5rem 1rem;
   }
 }
-.is-3-column {
-  background-image: url("https://s1.ax1x.com/2022/08/04/vefkXF.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.widget,
-.footer {
-  background-color: rgba(255,255,255,0.9);
-}
 body {
   counter-reset: card;
 }
