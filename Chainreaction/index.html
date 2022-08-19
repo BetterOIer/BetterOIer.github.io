@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chain Reaction - Advanced - The Game</title>
+<meta name="viewport" content="width=800px, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="Cause a Chain Reaction of explosions to clear the level.  For Advanced users only! Played by over 1 million players. Super addictive to play. Completely (ad) free.">
+<link rel="canonical" href="https://yvoschaap.com/chainrxnadvanced/">
+<meta property="og:url" content="https://yvoschaap.com/chainrxnadvanced/">
+<meta property="og:site_name" content="Chain Reaction">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cause a Chain Reaction of explosions to clear the level. This is the advanced level.">
+<meta property="og:image" content="https://yvoschaap.com/chainrxnadvanced/square.png">
+<script type="text/javascript" src="/js/CR/mootools-core-1.4.5.js"></script>
+<script type="text/javascript" src="/js/CR/touch.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/js/CR/chainrxn-2.0.js"></script>
+<script>
+if(Browser.isMobile){
+    document.addEvent('touchmove', function(event){
+        event.preventDefault();
+    });
+}
+</script>
+<link rel="stylesheet" href="/css/CR.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Chain Reaction</h1>
+  <h2>Advanced</h2>
+    <div id="container">
+        <canvas id="ballField"></canvas>
+        <div id="ballsExpanded"></div>
+    <div id="totalScore"></div>
+    <div id="levelScore"></div>
+    <div id="levelNumber"></div>
+        <div id="notifierBox">
+            <div id="notifierTitle">Cause a Chain Reaction</div>
+            <div id="notifierButton">Start Game</div>
+        </div>
+    </div>
+<div class="supported">
+    <p>Cause a Chain Reaction of explosions to clear the level. For Advanced users only! Played by over 1 million players. Super addictive to play. Completely (ad) free.</p>
+    <p>Go back to the <a href="/chainrxn/" title="Chain Reaction">default version</a>?</p>
+    <p>Supported by <a href="/">Yvo Schaap</a>.</p>
+</div>
+</body>
+</html>
