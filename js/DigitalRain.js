@@ -18,26 +18,26 @@
         drops.push(Math.ceil(canvas.height / fontSize) + 1)
     }
     function draw(){
-        context.fillStyle = "rgba(238,238,238,.08)";//�ڸǲ�
+        context.fillStyle = "rgba(238,238,238,.08)";//遮盖层
         context.fillRect(0,0,W,H);
-        //������������ʽ
+        //给字体设置样式
         context.font = "600 "+fontSize+"px  Georgia";
-        //������������ɫ
-        context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];//randColor();����rgb,hsl, ��׼ɫ��ʮ��������ɫ
-        //д�뻭����
+        //给字体添加颜色
+        context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];//randColor();可以rgb,hsl, 标准色，十六进制颜色
+        //写入画布中
         for(var i=0;i<colunms;i++){
             var index = Math.floor(Math.random() * str.length);
             var x = i*fontSize;
             var y = drops[i] *fontSize;
             context.fillText(str[index],x,y);
-            //���Ҫ�ı�ʱ�䣬�϶����Ǹı�ÿ���������
+            //如果要改变时间，肯定就是改变每次他的起点
             if(y >= canvas.height && Math.random() > 0.99){
                 drops[i] = 0;
             }
             drops[i]++;
         }
     };
-    function randColor(){//�����ɫ
+    function randColor(){//随机颜色
         var r = Math.floor(Math.random() * 256);
         var g = Math.floor(Math.random() * 256);
         var b = Math.floor(Math.random() * 256);
