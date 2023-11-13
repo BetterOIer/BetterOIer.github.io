@@ -28,3 +28,22 @@ body {
 .title.is-3 {
     font-size: 2.3rem;
 }
+
+@media screen and (min-width: 1104px), print {
+    .column.is-4, .column.is-4-tablet, .is-4-desktop, .is-4-widescreen {
+        width: 25%;  
+        max-width: 25rem;
+    }
+
+    .column.is-8, .column.is-8-tablet, .is-8-desktop, .is-8-widescreen {
+        width: 75%;
+    }
+}
+.article {
+    margin-right: 10px;
+    margin-left: 10px;
+    .content a img {
+        margin: auto;
+        display: block;
+    }
+}
