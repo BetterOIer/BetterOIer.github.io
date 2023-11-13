@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>数论比赛笔记 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="T1$k&amp;#x3D;1$ 时候$p_i &amp;#x3D; i$, $p_i \neq i, p_{p_i} &amp;#x3D; i$."><meta property="og:type" content="blog"><meta property="og:title" content="数论比赛笔记"><meta property="og:url" content="http://betteroier.site/posts/32218.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="T1$k&amp;#x3D;1$ 时候$p_i &amp;#x3D; i$, $p_i \neq i, p_{p_i} &amp;#x3D; i$."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/img/og_image.png"><meta property="article:published_time" content="2022-08-30T12:59:44.000Z"><meta property="article:modified_time" content="2023-11-13T08:17:27.581Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="题解"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/32218.html"},"headline":"数论比赛笔记","image":["http://betteroier.site/img/og_image.png"],"datePublished":"2022-08-30T12:59:44.000Z","dateModified":"2023-11-13T08:17:27.581Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"T1$k&#x3D;1$ 时候$p_i &#x3D; i$, $p_i \\neq i, p_{p_i} &#x3D; i$."}</script><link rel="canonical" href="http://betteroier.site/posts/32218.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-08-30T12:59:44.000Z" title="2022/8/30 20:59:44">2022-08-30</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">数论比赛笔记</h1><div class="content"><h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><h2 id="k-1-时候"><a href="#k-1-时候" class="headerlink" title="$k&#x3D;1$ 时候"></a>$k&#x3D;1$ 时候</h2><p>$p_i &#x3D; i$, $p_i \neq i, p_{p_i} &#x3D; i$.</p>
+<span id="more"></span>
+<p>$f_n$ 表示 $n$ 的答案。</p>
+<ol>
+<li>$p_1 &#x3D; 1$, $f_{n - 1}$</li>
+<li>$p_1 &#x3D; i \neq 1$. $p_i &#x3D; 1$. $(n-1)f_{n-2}$.</li>
+</ol>
+<p>$$f_n &#x3D; f_{n-1} + (n-1)f_{n-2}.$$</p>
+<p>$O(n)$</p>
+<h2 id="k-任意"><a href="#k-任意" class="headerlink" title="$k$ 任意"></a>$k$ 任意</h2><p>$f_n$ 表示答案</p>
+<p>从 $1$ 出发，走若干步回到 $1$，步数一定是 $2^k$ 的因数。</p>
+<p>枚举这个因数。之后要知道中间路过了哪些点。</p>
+<h1 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h1><h2 id="gcd-n-m-1"><a href="#gcd-n-m-1" class="headerlink" title="$\gcd(n, m) &#x3D; 1$"></a>$\gcd(n, m) &#x3D; 1$</h2><p>$b_j$ 可以对应到哪些 $a_i$:<br>$j \bmod n, (j + m) \bmod n, (j + 2m) \bmod n, \dots$</p>
+<p>恰好可以遍历所有的 $i$ (按一定顺序）</p>
+<p>无论从哪个 $j$ 开始，如果这一步匹配到了 $i$，下一步一定会匹配到 $(i + m) \bmod n$.</p>
+<p>把 $a$ 重新排序：</p>
+<p>$a_1, a_{1 + m}, a_{1 + 2m}, a_{1 + 3m}, \dots$.</p>
+<p>$c_k &#x3D; a_{1 + (k-1)m}$</p>
+<p>$c$ 也以 $n$ 为周期。<br>如果 $j$ 第一步匹配到 $c_u$, 之后就会匹配到 $c_{u+1},c_{u+2},\dots$.<br>也就是若干个周期加上单个周期内的一个区间。</p>
+<p>相当问：对每个 $j$, 对应的区间内有多少个 $c_i$ 比 $b_j$ 小。</p>
+<p>离散化，扫描，树状数组维护区间和</p>
+<h2 id="gcd-不一定是-1"><a href="#gcd-不一定是-1" class="headerlink" title="$\gcd$ 不一定是 $1$"></a>$\gcd$ 不一定是 $1$</h2><p>这时候设 $d &#x3D; \gcd(n, m)$</p>
+<p>可以发现只有在 $i \equiv j \pmod d$ 的时候他们两个才会匹配上。</p>
+<p>所以我们按 ${}\bmod d$ 分组，每组分别做。就可以了。</p>
+<h1 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h1><p>二分答案</p>
+<p>之后只需要判断是否存在 k 条白色边的生成树。</p>
+<p>只需要求出白色边最多&#x2F;最少多少条。</p>
+<p>性质：假设有一张图，有两个森林 $S, T$，如果 $S$ 的边数少于 $T$ 的边数，那么一定可以从 $T$ 里选出一条边加到 $S$ 里，还是森林。</p>
+<h1 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h1><p>$(1, a^{\varphi(m)} \bmod m)$</p>
+<p>记 $g_m(a)$ 表示有多少个 $n$ 使得 …</p>
+<p>$g_m(a) &#x3D; g_m(\gcd(a, m)).$</p>
+<p>$a &#x3D; dx, m &#x3D; dy$</p>
+<p>$a^n \bmod m &#x3D; d^nx^n \bmod dy$<br>$&#x3D;d\bigl(d^{n-1}x^n \bmod y\bigr)$</p>
+<p>$x$ 和 $y$ 是互质的。所以说 $x \bmod y$ 满足欧拉定理。<br>并且因为互质</p>
+<p>如果 $u, v$ 互质，$ux \equiv uy \pmod v$ 当且仅当 $x \equiv y \pmod v$.</p>
+<p>也就是说 $g_m(a) &#x3D; g_m(d)$.</p>
+<h2 id="进一步"><a href="#进一步" class="headerlink" title="进一步"></a>进一步</h2><p>$g_m(d)$ 怎么计算。</p>
+<p>$u_k &#x3D; \gcd(d^k, m)$.<br>$u_0 &lt; u_1 &lt; \dots &lt; u_s  &#x3D; u_{s+1} &#x3D; u_{s+2} &#x3D; \dots$.</p>
+<p>断言：$g_m(d) &#x3D; s$。也就是说 $d^n \not\equiv d^{n + \varphi(m)}$ 当且仅当 $n &lt; s$.</p>
+<ol>
+<li>如果 $n &lt; s$. 那么 $\gcd(d^n, m) \neq \gcd(d^{n + \varphi(m)}, m)$. 那么 $(d, n)$ 肯定是合法的对。</li>
+<li>如果 $n \geqslant s$.<br>我们要说明 $d^n \equiv d^{n + \varphi(m)}$.</li>
+</ol>
+<p>$$\begin{aligned}<br>d^n &amp;&#x3D; u_s \frac{d^n}{u_s} \<br>d^n \bmod m &amp;&#x3D; u_s \left(\frac{d^n}{u_s}<br>\bmod \frac{m}{u_s}\right) .<br>\end{aligned}$$</p>
+<p>$d$ 是和 $\frac{m}{u_s}$ 互质的。<br>所以说后面这个括号里的东西其实都是满足欧拉定理条件的。</p>
+<p>因此我们设质因数分解</p>
+<p>$$m &#x3D; \prod_i p_i^{x_i}, d &#x3D; \prod_i p_i^{y_i} \neq 1.$$</p>
+<p>就可以得到</p>
+<p>$$u_k &#x3D; \gcd(d^k, m) &#x3D; \prod_i p_i^{\min(x_i. ky_i)}$$</p>
+<p>$$g_m(d) &#x3D; s &#x3D; \max\left(\bigl\lceil \frac{x_i}{y_i} \bigr\rceil \middle| y_i \neq 0\right)$$</p>
+<p>使用 DP 计算答案。</p>
+<p>对于一个 $m$, 设 $m &#x3D; p^k l$, $p \nmid l$.</p>
+<p>$f_{m,i}$ 表示有多少个 $a$ 使得 $g_m(a) &#x3D; i$.</p>
+<p>考虑：$a &#x3D; p^v b, p \nmid b, g_l(b \bmod l) &#x3D; j$.</p>
+<p>这种情况下</p>
+<p>$g_m(a) &#x3D; s &#x3D; \begin{cases}<br>j &amp; v &#x3D; 0, \<br>\max(\lceil k&#x2F;v \rceil, j) &amp; v &gt; 0.<br>\end{cases}$</p>
+<p>用 $f_{l, j}$ 转移 $f_{m, s}$.<br>转移的系数：给定 $b \bmod l$ 和 $v$，能选出多少个 $a$ 来。也就是 $\varphi(p^{k-v})$.</p>
+<p>$[1, …, p^k l]$ 里面有多少个数 ${}\bmod (p^v l) &#x3D; p^v (b \bmod l)$ 并且和 $v$ 互质.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">取一个 m 的质因数 p</span><br><span class="line">k = 0, l = m</span><br><span class="line">while l % p == 0:</span><br><span class="line">  l /= p</span><br><span class="line">  k++</span><br><span class="line"></span><br><span class="line">for v &lt;= k</span><br><span class="line">  for j</span><br><span class="line">    s = v ? j : max(ceil(k / v), j));</span><br><span class="line">    if v &lt; k: f[m][s] += f[l][j] * phi(p^(k-v));</span><br><span class="line">    else: f[m][s] += f[l][j] * p^(k-v);</span><br></pre></td></tr></table></figure>
+
+<p>复杂度计算：$q_m$ 表示 $m$ 的质因子次数的最大值。<br>那么复杂度不超过 $O(\sum q_m^2)$.</p>
+<p>$O(\sum_m \sum x_i^2) &#x3D; O(\sum_p \sum_k (2k+1) \frac{M}{p^k}) &#x3D; O(M \sum_p \frac{1}{p^2})$</p>
+<p>总复杂度是 $O(m)$.</p>
+<p>$$\begin{aligned}<br>&amp;\sum_{i &#x3D; 1}^n \gcd(i, n)\<br>&#x3D;&amp;\sum_{i &#x3D; 1}^n \sum_{d \mid \gcd(i, d)} \varphi(d)\<br>&#x3D;&amp;\sum_{d \mid n} \varphi(d) \frac{n}{d}.<br>\end{aligned}$$</p>
+<p>$$ans(p^k) &#x3D; kp^{k-1}(p-1)+p^k$$</p>
+<p>$$2^{2^{2^\dots}} \bmod m$$</p>
+<p>$$ans(m) &#x3D; 2^{ans(\varphi(m)) + \varphi(m)} \bmod m.$$</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/638.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">BalanceTree平衡树</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/4852.html"><span class="level-item">GCD欧几里得算法&amp;exGCD拓欧</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#T1"><span class="level-left"><span class="level-item">1</span><span class="level-item">T1</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#k-1-时候"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">$k=1$ 时候</span></span></a></li><li><a class="level is-mobile" href="#k-任意"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">$k$ 任意</span></span></a></li></ul></li><li><a class="level is-mobile" href="#T2"><span class="level-left"><span class="level-item">2</span><span class="level-item">T2</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#gcd-n-m-1"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">$\gcd(n, m) = 1$</span></span></a></li><li><a class="level is-mobile" href="#gcd-不一定是-1"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">$\gcd$ 不一定是 $1$</span></span></a></li></ul></li><li><a class="level is-mobile" href="#T3"><span class="level-left"><span class="level-item">3</span><span class="level-item">T3</span></span></a></li><li><a class="level is-mobile" href="#T4"><span class="level-left"><span class="level-item">4</span><span class="level-item">T4</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#进一步"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">进一步</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

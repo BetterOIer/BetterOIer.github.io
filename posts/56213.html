@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>计数原理 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="排列数公式：$$P^k_n&amp;#x3D;\frac{n!}{(n-k)!}$$"><meta property="og:type" content="blog"><meta property="og:title" content="计数原理"><meta property="og:url" content="http://betteroier.site/posts/56213.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="排列数公式：$$P^k_n&amp;#x3D;\frac{n!}{(n-k)!}$$"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/img/og_image.png"><meta property="article:published_time" content="2022-08-02T06:21:31.000Z"><meta property="article:modified_time" content="2023-11-13T08:09:07.359Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="数学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/56213.html"},"headline":"计数原理","image":["http://betteroier.site/img/og_image.png"],"datePublished":"2022-08-02T06:21:31.000Z","dateModified":"2023-11-13T08:09:07.359Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"排列数公式：$$P^k_n&#x3D;\\frac{n!}{(n-k)!}$$"}</script><link rel="canonical" href="http://betteroier.site/posts/56213.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-08-02T06:21:31.000Z" title="2022/8/2 14:21:31">2022-08-02</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">计数原理</h1><div class="content"><h2 id="排列数公式："><a href="#排列数公式：" class="headerlink" title="排列数公式："></a>排列数公式：</h2><p>$$<br>P^k_n&#x3D;\frac{n!}{(n-k)!}<br>$$</p>
+<span id="more"></span>
+<h2 id="组合数公式："><a href="#组合数公式：" class="headerlink" title="组合数公式："></a>组合数公式：</h2><p>$$<br>P^k_n&#x3D;\frac{n!}{k!(n-k)!}<br>$$</p>
+<h3 id="这里规定-color-Red-0-1"><a href="#这里规定-color-Red-0-1" class="headerlink" title="这里规定 $\color{Red}0!&#x3D;1$"></a>这里规定 $\color{Red}0!&#x3D;1$</h3><h3 id="一些比较重要的公式"><a href="#一些比较重要的公式" class="headerlink" title="一些比较重要的公式"></a>一些比较重要的公式</h3><p>1.<br>$$<br>\dbinom{n}{k}&#x3D;\dbinom{n}{n-k}<br>$$<br>2.<br>$$<br>\dbinom{n}{k}&#x3D;\dbinom{n-1}{k}+\dbinom{n-1}{k-1}<br>$$<br>3.<br>$$<br>\dbinom{n}{k}\dbinom{k}{t}&#x3D;\dbinom{n}{t}\dbinom{n-t}{k-t}<br>$$<br>4.<br>$$<br>\dbinom{n}{k}&#x3D;{\sum_{i&#x3D;k+1}^n k^2}\dbinom{i-1}{k}<br>$$<br>5.<br>$$<br>\dbinom{n+m}{k}&#x3D;\sum_{i&#x3D;0}^k\dbinom{n}{i}\dbinom{m}{k-i}<br>$$<br>6.<br>$$<br>\dbinom{n}{a+1+b}&#x3D;\sum_{i&#x3D;a+1}^{n-b}\dbinom{i-1}{a}\dbinom{n-i}{b}<br>$$<br>7.<br>$$<br>(a+b)^n&#x3D;\sum_{i&#x3D;0}^n \dbinom{n}{i} a^i b^{n-i}<br>$$</p>
+<h3 id="组合数取模"><a href="#组合数取模" class="headerlink" title="组合数取模"></a>组合数取模</h3><ol>
+<li><p>$m \leq n\leq 1000,p \leq 10^9$  </p>
+<ul>
+<li>利用杨辉三角求解<br>$$<br>\dbinom{n}{m}&#x3D;\dbinom{n-1}{m}+\dbinom{n-1}{m-1}<br>$$</li>
+</ul>
+</li>
+<li><p>$m \leq n\leq 10^5,p$是质数  </p>
+<ul>
+<li>先求出阶乘，再求出阶乘的逆元<br>$$<br>\dbinom{n}{m}&#x3D;\dbinom{n}{n-m}<br>$$</li>
+<li>先$O(n)$求出$n!$,然后计算$n!$d的逆元，继而利用$n!$的逆元求出$(n-1)!$等的逆元  </li>
+<li>复杂度$O(n)-O(1)$。</li>
+</ul>
+</li>
+<li><p>$m \leq n\leq 10^{18},p \leq 10^5,p$是质数  </p>
+<ul>
+<li>利用Lucas定理<br> $$<br> \dbinom{n}{m}\equiv\dbinom{\lfloor \frac{n}{p} \rfloor}{\lfloor \frac{m}{p} \rfloor}\dbinom{n \mod p}{m \mod p}(\mod p)<br> $$  </li>
+<li>转到方法2  </li>
+<li>复杂度$O(p)-O(\log_pn)$</li>
+</ul>
+</li>
+<li><p>$m \leq n\leq 10^{5},p \leq 10^5$  </p>
+<ul>
+<li>利用线性筛分解n!,计算每种质因子出现的次数,快速幕计算。  </li>
+<li>质数数量为$O(\frac{n}{\ln n})$,复杂度为$O(n)$</li>
+</ul>
+</li>
+<li><p>$m \leq n\leq 10^{18},p^c \leq 10^5,p$是质数<br>$$<br>\dbinom{n}{m}(\mod p^c)<br>$$  </p>
+<ul>
+<li>由于涉及除法,所以考虑把存成不包含$p$因子的部分和$p$因子出现的次数处理。  </li>
+<li>考虑每次把不包含$p$因子的部分利用已预处理的阶乘计算,包含$p$因子的部分可以写成公差为$p$的等差数列,所以可以递归子问题,范围缩小为原来的$\frac{1}{p}$,<br>复杂度为$O(p^c)$</li>
+</ul>
+</li>
+<li><p>$m \leq n &lt; p \leq 10^9$  </p>
+<ul>
+<li>关键是计算$n!$,假设$n$是完全平方数,否则暴力计算完全平方数以外的部分。  </li>
+<li>构造多项式<br> $$<br> Q(x)&#x3D;\prod_{i&#x3D;0}^{\sqrt{n}}(x+i)<br> $$   </li>
+<li>那么可得<br> $$<br> n!&#x3D;\prod_{i&#x3D;0}^{\sqrt{n}-1}Q(i\sqrt{n})<br> $$</li>
+<li>$Q(x)$为$\sqrt{n}$阶多项式，现需要在$\sqrt{n}$个点求值</li>
+<li>现在的问题是多项式多点求值。</li>
+<li>为了描述方便,设给出多项式$F(x)$,求其在$A &#x3D; (a_o, a_1,\ldots, a_m)$处的值。</li>
+<li>构造多项式<br> $$<br> M_0(x)&#x3D;\prod_{i&#x3D;0}^{\lfloor \frac{m}{2} \rfloor}(x-a_i)<br> $$<br> $$<br> M_1(x)&#x3D;\prod_{i&#x3D;\lfloor \frac{m}{2} \rfloor+1}^{m}(x-a_i)<br> $$</li>
+<li>那么，设<br> $$<br> Q_0(x)&#x3D;F(x) \mod M_0(x)<br> $$<br> $$<br> Q_1(x)&#x3D;F(x) \mod M_1(x)<br> $$</li>
+<li>由于模去了$(x-a_i)$,所以$F(a_i)$的取值是不变的</li>
+<li>于是可以得到一个性质<br> $$<br> \forall i \in [0,\lfloor \frac{m}{2} \rfloor],F(a_i)&#x3D;Q_0(a_i)<br> $$<br> $$<br> \forall i \in [\lfloor \frac{m}{2} \rfloor+1,m],F(a_i)&#x3D;Q_1(a_i)<br> $$  </li>
+<li>分治递归解决</li>
+<li>于是求解$n!$的复杂度为$O(\sqrt{n}log^2n)$,问题解决。</li>
+</ul>
+</li>
+</ol>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/63072.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">LCA最近公共祖先模板</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/8302.html"><span class="level-item">Segment Tree线段树</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#排列数公式："><span class="level-left"><span class="level-item">1</span><span class="level-item">排列数公式：</span></span></a></li><li><a class="level is-mobile" href="#组合数公式："><span class="level-left"><span class="level-item">2</span><span class="level-item">组合数公式：</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#这里规定-color-Red-0-1"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">这里规定 $\color{Red}0!=1$</span></span></a></li><li><a class="level is-mobile" href="#一些比较重要的公式"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">一些比较重要的公式</span></span></a></li><li><a class="level is-mobile" href="#组合数取模"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">组合数取模</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

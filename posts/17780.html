@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>ZROISC2023 Workbook - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="ZR 2023 Summer  C  Workbook"><meta property="og:type" content="blog"><meta property="og:title" content="ZROISC2023 Workbook"><meta property="og:url" content="http://betteroier.site/posts/17780.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="ZR 2023 Summer  C  Workbook"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1955-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6619-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3295-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5280-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-891C-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4768-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2048-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7600-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4513-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-446C-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2757-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-452F-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3293-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4121-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1221F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-438D-green"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-228-purple"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4556-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4097-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7560-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6277-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6280-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1806E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeChef-FNCS-rgb(169, 159, 193)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-587F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1340F-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7125-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8204-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8211-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P9136-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5443-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1588F-green"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-710-purple"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8261-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4168-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4887-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5047-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6774-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-765F-green"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-671-purple"><meta property="og:image" content="https://img.shields.io/badge/QOJ-4405-red"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8078-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8375-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3369-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3391-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1486-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3285-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3165-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-915E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-896C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-809D-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7739-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3690-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2147-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2387-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4219-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3703-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4735-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5283-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3834-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2633-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2617-blue"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-218-purple"><meta property="og:image" content="https://img.shields.io/badge/HDU-4348-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3402-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4768-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3835-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2840-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3384-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-741D-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-3632-brown"><meta property="og:image" content="https://img.shields.io/badge/SPOJ-QTREE5-orange"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P9058-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5903-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5904-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2495-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-121-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5787-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4314-blue"><meta property="og:image" content="https://img.shields.io/badge/HDU-5306-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6242-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3437-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1464F-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-102759I-gree"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1880-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-607B-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1178F1-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1198D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-275D-green"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-dp_v-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4516-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3146-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2417-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1372E-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1352-blue"><meta property="og:image" content="https://img.shields.io/badge/HDU-2196-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1280D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1394D-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2704-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-895C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1215E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1299D-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2657-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-628D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-244B-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2153-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-401D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1238E-green"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-dp_s-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1036C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-55D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1073E-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-100257J-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-797F-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1912-blue"><meta property="og:image" content="https://img.shields.io/badge/HDU-3507-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5468-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1442D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1398F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-95E-green"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-agc019_f-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-739E-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4072-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3628-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-932F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-833B-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1962-blue"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-tdpc_fibonacci-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4719-blue"><meta property="og:image" content="https://img.shields.io/badge/POJ-3233-rgb(245, 78, 162)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-917C-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6772-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1420C2-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-103470E-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1182E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1286D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1380F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1458C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-954F-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-100418H-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104090D-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-100418A-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-100418C-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104160D-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104090C-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-100418D-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-103960K-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-100418J-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104160L-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-103960I-gree"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3811-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5431-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5656-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1495-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2480-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3807-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3773-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3846-blue"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-arc156_d-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4195-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6091-blue"><meta property="og:image" content="https://img.shields.io/badge/Gym-104090I-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeChef-CHEFMOD-rgb(169, 159, 193)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1835-blue"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-abc170_d-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3455-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2522-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3911-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2257-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1447-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1829-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3327-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4240-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4213-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5325-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6053-brown"><meta property="og:image" content="https://img.shields.io/badge/SPOJ-DIVCNT3-orange"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6714-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6686-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1587-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-838D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1036F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1043F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-997C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1096E-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-575-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3317-blue"><meta property="og:image" content="https://img.shields.io/badge/QOJ-5412-red"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7736-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6657-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7737-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-280C-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-101234D-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1097D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1187F-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2552-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1842G-green"><meta property="og:image" content="https://img.shields.io/badge/POJ-2348-rgb(245, 78, 162)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1033C-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1396B-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1190B-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2197-blue"><meta property="og:image" content="https://img.shields.io/badge/POJ-1704-rgb(245, 78, 162)"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1464E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1628D1-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8880-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-819E-green"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-460-purple"><meta property="og:image" content="https://img.shields.io/badge/Gym-101173D-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-103446K-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1695E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1109B-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2757-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8306-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-888G-green"><meta property="og:image" content="https://img.shields.io/badge/HDU-2609-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3805-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4287-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5446-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3375-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5410-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1137B-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2375-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4974-black"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-10035-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2375-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7114-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-537-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-10059-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2414-blue"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-arc141_f-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4555-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4287-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4762-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-932G-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-3089-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1313E-green"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-172-purple"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-476-purple"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2377-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2083-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2133-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6401-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-666E-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5404-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3980-blue"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-arc144_d-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-agc058_b-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-560-brown"><meta property="og:image" content="https://img.shields.io/badge/AtCoder-agc058_c-rgb(255, 241, 0)"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6709-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2481-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3772-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3726-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1774F1-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1774F2-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1770E-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1654E-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-104053E-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104053H-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104053L-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1394C-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-103640K-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-103048K-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-103640F-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1303G-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-102978F-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1333E-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-102978I-gree"><meta property="og:image" content="https://img.shields.io/badge/Gym-104460L-gree"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4151-blue"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-513-purple"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-528C-green"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-3569-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1347-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4562-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2109-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4010-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7831-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5284-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4779-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5471-blue"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-512-purple"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-1641-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-B3611-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3366-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-888G-green"><meta property="og:image" content="https://img.shields.io/badge/Baekjoon-17462-rgb(255, 199, 123)"><meta property="og:image" content="https://img.shields.io/badge/HDU-6722-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2180-black"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-2469-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3684-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4768-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8435-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8436-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-B3609-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-160D-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7123-blue"><meta property="og:image" content="https://img.shields.io/badge/UniversalOJ-117-purple"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-547D-green"><meta property="og:image" content="https://img.shields.io/badge/Baekjoon-20086-rgb(255, 199, 123)"><meta property="og:image" content="https://img.shields.io/badge/Baekjoon-13973-rgb(255, 199, 123)"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4782-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3825-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6036-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5297-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2612-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5960-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7515-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P1969-blue"><meta property="og:image" content="https://img.shields.io/badge/HDU-6184-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6076-brown"><meta property="og:image" content="https://img.shields.io/badge/HDU-5960-rgb(0, 210, 211)"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6254-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-3322-brown"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5163-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-1143-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2437-black"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6062-brown"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4788-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P6577-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3376-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2766-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3254-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-1066-black"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6003-brown"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1404E-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2762-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-1391-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-3144-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4663-black"><meta property="og:image" content="https://img.shields.io/badge/TopCoder-14719-white"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-3894-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-3774-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2039-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-3218-black"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1517G-green"><meta property="og:image" content="https://img.shields.io/badge/Gym-103861H-gree"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3381-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3357-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P7425-blue"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6079-brown"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-6068-brown"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-1070-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2879-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4249-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4003-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1288F-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P2304-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3980-blue"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P3308-blue"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-671D-green"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-2034-black"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-5326-black"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1209H-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P5653-blue"><meta property="og:image" content="https://img.shields.io/badge/黑暗爆炸-4977-black"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P4011-blue"><meta property="og:image" content="https://img.shields.io/badge/Gym-102201J-gree"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1364D-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1103C-green"><meta property="og:image" content="https://img.shields.io/badge/LibreOJ-3176-brown"><meta property="og:image" content="https://img.shields.io/badge/QOJ-5254-red"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1746F-green"><meta property="og:image" content="https://img.shields.io/badge/CodeForces-1479D-green"><meta property="og:image" content="https://img.shields.io/badge/洛谷-P8819-blue"><meta property="og:image" content="https://img.shields.io/badge/QOJ-5825-red"><meta property="article:published_time" content="2023-08-14T09:11:44.000Z"><meta property="article:modified_time" content="2023-11-13T07:50:45.821Z"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img.shields.io/badge/洛谷-P1955-blue"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/17780.html"},"headline":"ZROISC2023 Workbook","image":[],"datePublished":"2023-08-14T09:11:44.000Z","dateModified":"2023-11-13T07:50:45.821Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"ZR 2023 Summer  C  Workbook"}</script><link rel="canonical" href="http://betteroier.site/posts/17780.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-08-14T09:11:44.000Z" title="2023/8/14 17:11:44">2023-08-14</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">ZROISC2023 Workbook</h1><div class="content"><div align="center">
+<h2>
+ZR 2023 Summer  C <br> Workbook <span id="more"></span>
+</h2>
+
+
+</div>
+
+<hr>
+<h2 id="第一模块-数据结构-Day-1-7"><a href="#第一模块-数据结构-Day-1-7" class="headerlink" title="第一模块 - 数据结构 - Day 1~7"></a>第一模块 - 数据结构 - Day 1~7</h2><h3 id="Day1-2023-07-17"><a href="#Day1-2023-07-17" class="headerlink" title="Day1 - 2023.07.17"></a>Day1 - 2023.07.17</h3><ul>
+<li>专题：基础础数据结构及其应⽤（倍增、并查集、RMQ、树状数组、线段树）</li>
+<li>讲师：徐锐扬</li>
+<li>题目：8 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1955">
+    <img src="https://img.shields.io/badge/洛谷-P1955-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6619">
+    <img src="https://img.shields.io/badge/洛谷-P6619-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3295">
+    <img src="https://img.shields.io/badge/洛谷-P3295-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5280">
+    <img src="https://img.shields.io/badge/洛谷-P5280-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/891/C">
+    <img src="https://img.shields.io/badge/CodeForces-891C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4768">
+    <img src="https://img.shields.io/badge/洛谷-P4768-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2048">
+    <img src="https://img.shields.io/badge/洛谷-P2048-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7600">
+    <img src="https://img.shields.io/badge/洛谷-P7600-blue" />
+</a>
+
+<h3 id="Day2-2023-07-18"><a href="#Day2-2023-07-18" class="headerlink" title="Day2 - 2023.07.18"></a>Day2 - 2023.07.18</h3><ul>
+<li>专题：线段树进阶扩展（扫描线、动态开点线段树、线段树合并）</li>
+<li>讲师：高麟翔</li>
+<li>题目：12 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4513">
+    <img src="https://img.shields.io/badge/洛谷-P4513-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/446/C">
+    <img src="https://img.shields.io/badge/CodeForces-446C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2757">
+    <img src="https://img.shields.io/badge/洛谷-P2757-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/452/F">
+    <img src="https://img.shields.io/badge/CodeForces-452F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3293">
+    <img src="https://img.shields.io/badge/洛谷-P3293-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4121">
+    <img src="https://img.shields.io/badge/洛谷-P4121-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1221/F">
+    <img src="https://img.shields.io/badge/CodeForces-1221F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/438/D">
+    <img src="https://img.shields.io/badge/CodeForces-438D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/228">
+    <img src="https://img.shields.io/badge/UniversalOJ-228-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4556">
+    <img src="https://img.shields.io/badge/洛谷-P4556-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4097">
+    <img src="https://img.shields.io/badge/洛谷-P4097-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7560">
+    <img src="https://img.shields.io/badge/洛谷-P7560-blue" />
+</a>
+
+<h3 id="Day3-2023-07-19"><a href="#Day3-2023-07-19" class="headerlink" title="Day3 - 2023.07.19"></a>Day3 - 2023.07.19</h3><ul>
+<li>专题：基础分块算法与离线算法（莫队、整体⼆分、时间线段树）</li>
+<li>讲师：张家瑞</li>
+<li>题目：23 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6277">
+    <img src="https://img.shields.io/badge/LibreOJ-6277-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6280">
+    <img src="https://img.shields.io/badge/LibreOJ-6280-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1806/E">
+    <img src="https://img.shields.io/badge/CodeForces-1806E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.codechef.com/problems/FNCS">
+    <img src="https://img.shields.io/badge/CodeChef-FNCS-rgb(169, 159, 193)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/587/F">
+    <img src="https://img.shields.io/badge/CodeForces-587F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1340/F">
+    <img src="https://img.shields.io/badge/CodeForces-1340F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7125">
+    <img src="https://img.shields.io/badge/洛谷-P7125-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8204">
+    <img src="https://img.shields.io/badge/洛谷-P8204-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8211">
+    <img src="https://img.shields.io/badge/洛谷-P8211-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9136">
+    <img src="https://img.shields.io/badge/洛谷-P9136-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5443">
+    <img src="https://img.shields.io/badge/洛谷-P5443-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1588/F">
+    <img src="https://img.shields.io/badge/CodeForces-1588F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/710">
+    <img src="https://img.shields.io/badge/UniversalOJ-710-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8261">
+    <img src="https://img.shields.io/badge/洛谷-P8261-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4168">
+    <img src="https://img.shields.io/badge/洛谷-P4168-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4887">
+    <img src="https://img.shields.io/badge/洛谷-P4887-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5047">
+    <img src="https://img.shields.io/badge/洛谷-P5047-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6774">
+    <img src="https://img.shields.io/badge/洛谷-P6774-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/765/F">
+    <img src="https://img.shields.io/badge/CodeForces-765F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/671">
+    <img src="https://img.shields.io/badge/UniversalOJ-671-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://qoj.ac/problem/4405">
+    <img src="https://img.shields.io/badge/QOJ-4405-red"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8078">
+    <img src="https://img.shields.io/badge/洛谷-P8078-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8375">
+    <img src="https://img.shields.io/badge/洛谷-P8375-blue" />
+</a>
+
+<h3 id="Day4-2023-07-20"><a href="#Day4-2023-07-20" class="headerlink" title="Day4 - 2023.07.20"></a>Day4 - 2023.07.20</h3><ul>
+<li>专题：平衡树及其应⽤（Splay,Treap）、LCT</li>
+<li>讲师：高麟翔</li>
+<li>题目：14 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3369">
+    <img src="https://img.shields.io/badge/洛谷-P3369-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3391">
+    <img src="https://img.shields.io/badge/洛谷-P3391-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1486">
+    <img src="https://img.shields.io/badge/洛谷-P1486-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3285">
+    <img src="https://img.shields.io/badge/洛谷-P3285-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3165">
+    <img src="https://img.shields.io/badge/洛谷-P3165-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/915/E">
+    <img src="https://img.shields.io/badge/CodeForces-915E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/896/C">
+    <img src="https://img.shields.io/badge/CodeForces-896C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/809/D">
+    <img src="https://img.shields.io/badge/CodeForces-809D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7739">
+    <img src="https://img.shields.io/badge/洛谷-P7739-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3690">
+    <img src="https://img.shields.io/badge/洛谷-P3690-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2147">
+    <img src="https://img.shields.io/badge/洛谷-P2147-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2387">
+    <img src="https://img.shields.io/badge/洛谷-P2387-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4219">
+    <img src="https://img.shields.io/badge/洛谷-P4219-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3703">
+    <img src="https://img.shields.io/badge/洛谷-P3703-blue" />
+</a>
+
+<h3 id="Day5-2023-07-21"><a href="#Day5-2023-07-21" class="headerlink" title="Day5 - 2023.07.21"></a>Day5 - 2023.07.21</h3><ul>
+<li>专题：树上信息维护（树链剖分、可并堆、启发式合并）、可持久化数据结构、点分治</li>
+<li>讲师：高麟翔</li>
+<li>题目：16 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4735">
+    <img src="https://img.shields.io/badge/洛谷-P4735-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5283">
+    <img src="https://img.shields.io/badge/洛谷-P5283-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3834">
+    <img src="https://img.shields.io/badge/洛谷-P3834-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2633">
+    <img src="https://img.shields.io/badge/洛谷-P2633-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2617">
+    <img src="https://img.shields.io/badge/洛谷-P2617-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/218">
+    <img src="https://img.shields.io/badge/UniversalOJ-218-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=4348">
+    <img src="https://img.shields.io/badge/HDU-4348-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3402">
+    <img src="https://img.shields.io/badge/洛谷-P3402-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4768">
+    <img src="https://img.shields.io/badge/洛谷-P4768-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3835">
+    <img src="https://img.shields.io/badge/洛谷-P3835-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2840">
+    <img src="https://img.shields.io/badge/LibreOJ-2840-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3384">
+    <img src="https://img.shields.io/badge/洛谷-P3384-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/741/D">
+    <img src="https://img.shields.io/badge/CodeForces-741D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/3632">
+    <img src="https://img.shields.io/badge/LibreOJ-3632-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.spoj.com/problems/QTREE5/en/">
+    <img src="https://img.shields.io/badge/SPOJ-QTREE5-orange"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9058">
+    <img src="https://img.shields.io/badge/洛谷-P9058-blue" />
+</a>
+
+<h3 id="Day6-2023-07-22"><a href="#Day6-2023-07-22" class="headerlink" title="Day6 - 2023.07.22"></a>Day6 - 2023.07.22</h3><ul>
+<li>专题：点分治、点分树、 虚树、长链剖分、线段树分治 </li>
+<li>讲师：高麟翔</li>
+<li>题目：11 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5903">
+    <img src="https://img.shields.io/badge/洛谷-P5903-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5904">
+    <img src="https://img.shields.io/badge/洛谷-P5904-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2495">
+    <img src="https://img.shields.io/badge/洛谷-P2495-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/121">
+    <img src="https://img.shields.io/badge/LibreOJ-121-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5787">
+    <img src="https://img.shields.io/badge/洛谷-P5787-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4314">
+    <img src="https://img.shields.io/badge/洛谷-P4314-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=5306">
+    <img src="https://img.shields.io/badge/HDU-5306-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6242">
+    <img src="https://img.shields.io/badge/洛谷-P6242-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3437">
+    <img src="https://img.shields.io/badge/洛谷-P3437-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1464/F">
+    <img src="https://img.shields.io/badge/CodeForces-1464F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/102759/problem/I">
+    <img src="https://img.shields.io/badge/Gym-102759I-gree"/>
+</a>
+
+<h3 id="Day7-2023-07-23"><a href="#Day7-2023-07-23" class="headerlink" title="Day7 - 2023.07.23"></a>Day7 - 2023.07.23</h3><ul>
+<li>模拟赛。</li>
+<li>出题：高麟翔</li>
+<li>题目：4 道</li>
+<li>时长：3.5 小时</li>
+</ul>
+<h2 id="第二模块-动态规划-Day-8-12"><a href="#第二模块-动态规划-Day-8-12" class="headerlink" title="第二模块 - 动态规划 - Day 8~12"></a>第二模块 - 动态规划 - Day 8~12</h2><h3 id="Day8-2023-07-24"><a href="#Day8-2023-07-24" class="headerlink" title="Day8 - 2023.07.24"></a>Day8 - 2023.07.24</h3><ul>
+<li>专题：区间 DP、树形 DP</li>
+<li>讲师：李昕然</li>
+<li>题目：7 + 7 &#x3D; 14 道</li>
+</ul>
+<h4 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h4><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1880">
+    <img src="https://img.shields.io/badge/洛谷-P1880-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/607/B">
+    <img src="https://img.shields.io/badge/CodeForces-607B-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1178F/1">
+    <img src="https://img.shields.io/badge/CodeForces-1178F1-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1198/D">
+    <img src="https://img.shields.io/badge/CodeForces-1198D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/275/D">
+    <img src="https://img.shields.io/badge/CodeForces-275D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_v">
+    <img src="https://img.shields.io/badge/AtCoder-dp_v-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4516">
+    <img src="https://img.shields.io/badge/洛谷-P4516-blue" />
+</a>
+
+<h4 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h4><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3146">
+    <img src="https://img.shields.io/badge/洛谷-P3146-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2417">
+    <img src="https://img.shields.io/badge/LibreOJ-2417-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1372/E">
+    <img src="https://img.shields.io/badge/CodeForces-1372E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1352">
+    <img src="https://img.shields.io/badge/洛谷-P1352-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=2196">
+    <img src="https://img.shields.io/badge/HDU-2196-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1280/D">
+    <img src="https://img.shields.io/badge/CodeForces-1280D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1394/D">
+    <img src="https://img.shields.io/badge/CodeForces-1394D-green"/>
+</a>
+
+<h3 id="Day9-2023-07-25"><a href="#Day9-2023-07-25" class="headerlink" title="Day9 - 2023.07.25"></a>Day9 - 2023.07.25</h3><ul>
+<li>专题：状压 DP、数位 DP</li>
+<li>讲师：李昕然</li>
+<li>题目：7 + 8 &#x3D; 15 道</li>
+</ul>
+<h4 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h4><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2704">
+    <img src="https://img.shields.io/badge/洛谷-P2704-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/895/C">
+    <img src="https://img.shields.io/badge/CodeForces-895C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1215/E">
+    <img src="https://img.shields.io/badge/CodeForces-1215E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1299/D">
+    <img src="https://img.shields.io/badge/CodeForces-1299D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2657">
+    <img src="https://img.shields.io/badge/洛谷-P2657-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/628/D">
+    <img src="https://img.shields.io/badge/CodeForces-628D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/244/B">
+    <img src="https://img.shields.io/badge/CodeForces-244B-green"/>
+</a>
+
+
+<h4 id="作业-1"><a href="#作业-1" class="headerlink" title="作业"></a>作业</h4><a target="_blank" rel="noopener" href="https://loj.ac/p/2153">
+    <img src="https://img.shields.io/badge/LibreOJ-2153-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/401/D">
+    <img src="https://img.shields.io/badge/CodeForces-401D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1238/E">
+    <img src="https://img.shields.io/badge/CodeForces-1238E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_s">
+    <img src="https://img.shields.io/badge/AtCoder-dp_s-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1036/C">
+    <img src="https://img.shields.io/badge/CodeForces-1036C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/55/D">
+    <img src="https://img.shields.io/badge/CodeForces-55D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1073/E">
+    <img src="https://img.shields.io/badge/CodeForces-1073E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100257/problem/J">
+    <img src="https://img.shields.io/badge/Gym-100257J-gree"/>
+</a>
+
+<h3 id="Day10-2023-07-26"><a href="#Day10-2023-07-26" class="headerlink" title="Day10 - 2023.07.26"></a>Day10 - 2023.07.26</h3><ul>
+<li>专题： dp优化（四边形不等式、斜率优化、决策单调性、CDQ分治、数据结构）</li>
+<li>讲师：李昕然</li>
+<li>题目：9 + 4 &#x3D; 13 道</li>
+</ul>
+<h4 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h4><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/797/F">
+    <img src="https://img.shields.io/badge/CodeForces-797F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1912">
+    <img src="https://img.shields.io/badge/洛谷-P1912-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=3507">
+    <img src="https://img.shields.io/badge/HDU-3507-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5468">
+    <img src="https://img.shields.io/badge/洛谷-P5468-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1442/D">
+    <img src="https://img.shields.io/badge/CodeForces-1442D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1398/F">
+    <img src="https://img.shields.io/badge/CodeForces-1398F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/95/E">
+    <img src="https://img.shields.io/badge/CodeForces-95E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc019/tasks/agc019_f">
+    <img src="https://img.shields.io/badge/AtCoder-agc019_f-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/739/E">
+    <img src="https://img.shields.io/badge/CodeForces-739E-green"/>
+</a>
+
+<h4 id="作业-2"><a href="#作业-2" class="headerlink" title="作业"></a>作业</h4><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4072">
+    <img src="https://img.shields.io/badge/洛谷-P4072-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3628">
+    <img src="https://img.shields.io/badge/洛谷-P3628-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/932/F">
+    <img src="https://img.shields.io/badge/CodeForces-932F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/833/B">
+    <img src="https://img.shields.io/badge/CodeForces-833B-green"/>
+</a>
+
+<h3 id="Day11-2023-07-27"><a href="#Day11-2023-07-27" class="headerlink" title="Day11 - 2023.07.27"></a>Day11 - 2023.07.27</h3><ul>
+<li>专题：矩阵乘法dp、常系数齐次线性递推、动态dp</li>
+<li>讲师：李昕然</li>
+<li>题目：10 + 3 &#x3D; 13 道</li>
+</ul>
+<h4 id="例题-3"><a href="#例题-3" class="headerlink" title="例题"></a>例题</h4><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1962">
+    <img src="https://img.shields.io/badge/洛谷-P1962-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/tdpc/tasks/tdpc_fibonacci">
+    <img src="https://img.shields.io/badge/AtCoder-tdpc_fibonacci-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4719">
+    <img src="https://img.shields.io/badge/洛谷-P4719-blue" />
+</a>
+<a target="_blank" rel="noopener" href="http://poj.org/problem?id=3233">
+    <img src="https://img.shields.io/badge/POJ-3233-rgb(245, 78, 162)" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/917/C">
+    <img src="https://img.shields.io/badge/CodeForces-917C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6772">
+    <img src="https://img.shields.io/badge/洛谷-P6772-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1420C/2">
+    <img src="https://img.shields.io/badge/CodeForces-1420C2-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103470/problem/E">
+    <img src="https://img.shields.io/badge/Gym-103470E-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1182/E">
+    <img src="https://img.shields.io/badge/CodeForces-1182E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1286/D">
+    <img src="https://img.shields.io/badge/CodeForces-1286D-green"/>
+</a>
+
+<h4 id="作业-3"><a href="#作业-3" class="headerlink" title="作业"></a>作业</h4><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1380/F">
+    <img src="https://img.shields.io/badge/CodeForces-1380F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1458/C">
+    <img src="https://img.shields.io/badge/CodeForces-1458C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/954/F">
+    <img src="https://img.shields.io/badge/CodeForces-954F-green"/>
+</a>
+
+<h3 id="Day12-2023-07-28"><a href="#Day12-2023-07-28" class="headerlink" title="Day12 - 2023.07.28"></a>Day12 - 2023.07.28</h3><ul>
+<li>欢乐 ACM 赛（CD）。</li>
+<li><a href="/contest/570501">比赛链接</a></li>
+<li>整理：徐锐扬</li>
+<li>题目：11 道</li>
+<li>时长：5 小时</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100418/problem/H">
+    <img src="https://img.shields.io/badge/Gym-100418H-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104090/problem/D">
+    <img src="https://img.shields.io/badge/Gym-104090D-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100418/problem/A">
+    <img src="https://img.shields.io/badge/Gym-100418A-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100418/problem/C">
+    <img src="https://img.shields.io/badge/Gym-100418C-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104160/problem/D">
+    <img src="https://img.shields.io/badge/Gym-104160D-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104090/problem/C">
+    <img src="https://img.shields.io/badge/Gym-104090C-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100418/problem/D">
+    <img src="https://img.shields.io/badge/Gym-100418D-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103960/problem/K">
+    <img src="https://img.shields.io/badge/Gym-103960K-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/100418/problem/J">
+    <img src="https://img.shields.io/badge/Gym-100418J-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104160/problem/L">
+    <img src="https://img.shields.io/badge/Gym-104160L-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103960/problem/I">
+    <img src="https://img.shields.io/badge/Gym-103960I-gree"/>
+</a>
+
+<h2 id="第三模块-数学、数论-Day13-19"><a href="#第三模块-数学、数论-Day13-19" class="headerlink" title="第三模块 - 数学、数论 - Day13~19"></a>第三模块 - 数学、数论 - Day13~19</h2><h3 id="Day13-2023-07-29"><a href="#Day13-2023-07-29" class="headerlink" title="Day13 - 2023.07.29"></a>Day13 - 2023.07.29</h3><ul>
+<li>专题：乘法逆元、同余、exgcd、线性代数基础、BSGS 、原根 </li>
+<li>讲师：叶子川</li>
+<li>题目：13 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3811">
+    <img src="https://img.shields.io/badge/洛谷-P3811-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5431">
+    <img src="https://img.shields.io/badge/洛谷-P5431-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5656">
+    <img src="https://img.shields.io/badge/洛谷-P5656-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1495">
+    <img src="https://img.shields.io/badge/洛谷-P1495-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2480">
+    <img src="https://img.shields.io/badge/洛谷-P2480-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3807">
+    <img src="https://img.shields.io/badge/洛谷-P3807-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3773">
+    <img src="https://img.shields.io/badge/洛谷-P3773-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3846">
+    <img src="https://img.shields.io/badge/洛谷-P3846-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/arc156/tasks/arc156_d">
+    <img src="https://img.shields.io/badge/AtCoder-arc156_d-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4195">
+    <img src="https://img.shields.io/badge/洛谷-P4195-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6091">
+    <img src="https://img.shields.io/badge/洛谷-P6091-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104090/problem/I">
+    <img src="https://img.shields.io/badge/Gym-104090I-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.codechef.com/problems/CHEFMOD">
+    <img src="https://img.shields.io/badge/CodeChef-CHEFMOD-rgb(169, 159, 193)"/>
+</a>BONUS
+
+<h3 id="Day14-2023-07-30"><a href="#Day14-2023-07-30" class="headerlink" title="Day14 - 2023.07.30"></a>Day14 - 2023.07.30</h3><ul>
+<li>专题：筛法（埃⽒筛、线性筛、杜教筛、Powerful Number 筛 、 min25筛）、莫⽐乌斯反演、狄利克雷卷积</li>
+<li>讲师：罗恺</li>
+<li>题目：17 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">
+    <img src="https://img.shields.io/badge/洛谷-P1835-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc170/tasks/abc170_d">
+    <img src="https://img.shields.io/badge/AtCoder-abc170_d-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3455">
+    <img src="https://img.shields.io/badge/洛谷-P3455-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2522">
+    <img src="https://img.shields.io/badge/洛谷-P2522-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3911">
+    <img src="https://img.shields.io/badge/洛谷-P3911-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2257">
+    <img src="https://img.shields.io/badge/洛谷-P2257-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1447">
+    <img src="https://img.shields.io/badge/洛谷-P1447-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1829">
+    <img src="https://img.shields.io/badge/洛谷-P1829-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3327">
+    <img src="https://img.shields.io/badge/洛谷-P3327-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4240">
+    <img src="https://img.shields.io/badge/洛谷-P4240-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4213">
+    <img src="https://img.shields.io/badge/洛谷-P4213-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5325">
+    <img src="https://img.shields.io/badge/洛谷-P5325-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6053">
+    <img src="https://img.shields.io/badge/LibreOJ-6053-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.spoj.com/problems/DIVCNT3/en/">
+    <img src="https://img.shields.io/badge/SPOJ-DIVCNT3-orange"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6714">
+    <img src="https://img.shields.io/badge/LibreOJ-6714-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6686">
+    <img src="https://img.shields.io/badge/LibreOJ-6686-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1587">
+    <img src="https://img.shields.io/badge/洛谷-P1587-blue" />
+</a>
+
+<h3 id="Day15-2023-07-31"><a href="#Day15-2023-07-31" class="headerlink" title="Day15 - 2023.07.31"></a>Day15 - 2023.07.31</h3><ul>
+<li>专题：组合数学（容斥原理、树prufer序、Matrix-Tree定理、LGV引理）</li>
+<li>讲师：王泽远</li>
+<li>题目：11 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/838/D">
+    <img src="https://img.shields.io/badge/CodeForces-838D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1036/F">
+    <img src="https://img.shields.io/badge/CodeForces-1036F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1043/F">
+    <img src="https://img.shields.io/badge/CodeForces-1043F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/997/C">
+    <img src="https://img.shields.io/badge/CodeForces-997C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1096/E">
+    <img src="https://img.shields.io/badge/CodeForces-1096E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/575">
+    <img src="https://img.shields.io/badge/LibreOJ-575-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3317">
+    <img src="https://img.shields.io/badge/洛谷-P3317-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://qoj.ac/problem/5412">
+    <img src="https://img.shields.io/badge/QOJ-5412-red"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7736">
+    <img src="https://img.shields.io/badge/洛谷-P7736-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6657">
+    <img src="https://img.shields.io/badge/洛谷-P6657-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7737">
+    <img src="https://img.shields.io/badge/洛谷-P7737-blue" />
+</a>
+
+<h3 id="Day16-2023-08-01"><a href="#Day16-2023-08-01" class="headerlink" title="Day16 - 2023.08.01"></a>Day16 - 2023.08.01</h3><ul>
+<li>专题：概率期望、多项式、⽣成函数</li>
+<li>讲师：吕秋实</li>
+<li>题目：6 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/280/C">
+    <img src="https://img.shields.io/badge/CodeForces-280C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/101234/problem/D">
+    <img src="https://img.shields.io/badge/Gym-101234D-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1097/D">
+    <img src="https://img.shields.io/badge/CodeForces-1097D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1187/F">
+    <img src="https://img.shields.io/badge/CodeForces-1187F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2552">
+    <img src="https://img.shields.io/badge/LibreOJ-2552-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1842/G">
+    <img src="https://img.shields.io/badge/CodeForces-1842G-green"/>
+</a>
+
+<h3 id="Day17-2023-08-02"><a href="#Day17-2023-08-02" class="headerlink" title="Day17 - 2023.08.02"></a>Day17 - 2023.08.02</h3><ul>
+<li>专题：博弈论、SG函数</li>
+<li>讲师：吕秋实</li>
+<li>题目：8 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="http://poj.org/problem?id=2348">
+    <img src="https://img.shields.io/badge/POJ-2348-rgb(245, 78, 162)" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1033/C">
+    <img src="https://img.shields.io/badge/CodeForces-1033C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1396/B">
+    <img src="https://img.shields.io/badge/CodeForces-1396B-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1190/B">
+    <img src="https://img.shields.io/badge/CodeForces-1190B-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2197">
+    <img src="https://img.shields.io/badge/洛谷-P2197-blue" />
+</a>
+<a target="_blank" rel="noopener" href="http://poj.org/problem?id=1704">
+    <img src="https://img.shields.io/badge/POJ-1704-rgb(245, 78, 162)" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1464/E">
+    <img src="https://img.shields.io/badge/CodeForces-1464E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1628D/1">
+    <img src="https://img.shields.io/badge/CodeForces-1628D1-green"/>
+</a>
+
+<ul>
+<li>附加模拟赛。</li>
+<li>出题：不知道</li>
+<li>题目：3 道</li>
+<li>时长：3 小时</li>
+</ul>
+<h3 id="Day18-2023-08-03"><a href="#Day18-2023-08-03" class="headerlink" title="Day18 - 2023.08.03"></a>Day18 - 2023.08.03</h3><ul>
+<li>专题：构造</li>
+<li>讲师：吕秋实</li>
+<li>题目：理论上是 10 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8880">
+    <img src="https://img.shields.io/badge/洛谷-P8880-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/819/E">
+    <img src="https://img.shields.io/badge/CodeForces-819E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/460">
+    <img src="https://img.shields.io/badge/UniversalOJ-460-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/101173/problem/D">
+    <img src="https://img.shields.io/badge/Gym-101173D-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103446/problem/K">
+    <img src="https://img.shields.io/badge/Gym-103446K-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1695/E">
+    <img src="https://img.shields.io/badge/CodeForces-1695E-green"/>
+</a>
+
+<h3 id="Day19-2023-08-04"><a href="#Day19-2023-08-04" class="headerlink" title="Day19 - 2023.08.04"></a>Day19 - 2023.08.04</h3><ul>
+<li>模拟赛。</li>
+<li>出题：吕秋实</li>
+<li>题目：4 道</li>
+<li>时长：3.5 小时</li>
+</ul>
+<h2 id="第四模块-字符串-Day20-24"><a href="#第四模块-字符串-Day20-24" class="headerlink" title="第四模块 - 字符串 - Day20~24"></a>第四模块 - 字符串 - Day20~24</h2><h3 id="Day20-2023-08-05"><a href="#Day20-2023-08-05" class="headerlink" title="Day20 - 2023.08.05"></a>Day20 - 2023.08.05</h3><ul>
+<li>专题：基础字符串算法（Hash、Trie、最小表示法、KMP、Manacher）</li>
+<li>讲师：吕秋实</li>
+<li>题目：12 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1109/B">
+    <img src="https://img.shields.io/badge/CodeForces-1109B-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2757">
+    <img src="https://img.shields.io/badge/洛谷-P2757-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8306">
+    <img src="https://img.shields.io/badge/洛谷-P8306-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/888/G">
+    <img src="https://img.shields.io/badge/CodeForces-888G-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=2609">
+    <img src="https://img.shields.io/badge/HDU-2609-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3805">
+    <img src="https://img.shields.io/badge/洛谷-P3805-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4287">
+    <img src="https://img.shields.io/badge/洛谷-P4287-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5446">
+    <img src="https://img.shields.io/badge/洛谷-P5446-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3375">
+    <img src="https://img.shields.io/badge/洛谷-P3375-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5410">
+    <img src="https://img.shields.io/badge/洛谷-P5410-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1137/B">
+    <img src="https://img.shields.io/badge/CodeForces-1137B-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2375">
+    <img src="https://img.shields.io/badge/洛谷-P2375-blue" />
+</a>
+
+<h3 id="Day21-2023-08-06"><a href="#Day21-2023-08-06" class="headerlink" title="Day21 - 2023.08.06"></a>Day21 - 2023.08.06</h3><ul>
+<li>专题：进阶算法（扩展KMP、AC自动机、回文树）</li>
+<li>讲师：yny</li>
+<li>题目：16 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4974">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4974-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/10035">
+    <img src="https://img.shields.io/badge/LibreOJ-10035-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2375">
+    <img src="https://img.shields.io/badge/洛谷-P2375-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7114">
+    <img src="https://img.shields.io/badge/洛谷-P7114-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/537">
+    <img src="https://img.shields.io/badge/LibreOJ-537-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/10059">
+    <img src="https://img.shields.io/badge/LibreOJ-10059-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2414">
+    <img src="https://img.shields.io/badge/洛谷-P2414-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/arc141/tasks/arc141_f">
+    <img src="https://img.shields.io/badge/AtCoder-arc141_f-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4555">
+    <img src="https://img.shields.io/badge/洛谷-P4555-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4287">
+    <img src="https://img.shields.io/badge/洛谷-P4287-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4762">
+    <img src="https://img.shields.io/badge/洛谷-P4762-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/932/G">
+    <img src="https://img.shields.io/badge/CodeForces-932G-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/3089">
+    <img src="https://img.shields.io/badge/LibreOJ-3089-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1313/E">
+    <img src="https://img.shields.io/badge/CodeForces-1313E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/172">
+    <img src="https://img.shields.io/badge/UniversalOJ-172-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/476">
+    <img src="https://img.shields.io/badge/UniversalOJ-476-purple"/>
+</a>
+
+<h3 id="Day22-2023-08-07"><a href="#Day22-2023-08-07" class="headerlink" title="Day22 - 2023.08.07"></a>Day22 - 2023.08.07</h3><ul>
+<li>专题：后缀数组与后缀⾃动机（⼴义 SAM）</li>
+<li>讲师：yny</li>
+<li>题目：5 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2377">
+    <img src="https://img.shields.io/badge/LibreOJ-2377-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2083">
+    <img src="https://img.shields.io/badge/LibreOJ-2083-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2133">
+    <img src="https://img.shields.io/badge/LibreOJ-2133-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6401">
+    <img src="https://img.shields.io/badge/LibreOJ-6401-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/666/E">
+    <img src="https://img.shields.io/badge/CodeForces-666E-green"/>
+</a>
+
+<h3 id="Day23-2023-08-08"><a href="#Day23-2023-08-08" class="headerlink" title="Day23 - 2023.08.08"></a>Day23 - 2023.08.08</h3><ul>
+<li>专题：趣题（杂题）选做</li>
+<li>讲师：yny</li>
+<li>题目：14 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5404">
+    <img src="https://img.shields.io/badge/洛谷-P5404-blue" />
+</a>
+
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3980">
+    <img src="https://img.shields.io/badge/洛谷-P3980-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/arc144/tasks/arc144_d">
+    <img src="https://img.shields.io/badge/AtCoder-arc144_d-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc058/tasks/agc058_b">
+    <img src="https://img.shields.io/badge/AtCoder-agc058_b-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/560">
+    <img src="https://img.shields.io/badge/LibreOJ-560-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc058/tasks/agc058_c">
+    <img src="https://img.shields.io/badge/AtCoder-agc058_c-rgb(255, 241, 0)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6709">
+    <img src="https://img.shields.io/badge/LibreOJ-6709-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2481">
+    <img src="https://img.shields.io/badge/洛谷-P2481-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3772">
+    <img src="https://img.shields.io/badge/洛谷-P3772-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3726">
+    <img src="https://img.shields.io/badge/洛谷-P3726-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1774F/1">
+    <img src="https://img.shields.io/badge/CodeForces-1774F1-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1774F/2">
+    <img src="https://img.shields.io/badge/CodeForces-1774F2-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1770/E">
+    <img src="https://img.shields.io/badge/CodeForces-1770E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1654/E">
+    <img src="https://img.shields.io/badge/CodeForces-1654E-green"/>
+</a>
+
+<ul>
+<li>附加模拟赛。</li>
+<li>出题：不知道</li>
+<li>题目：3 道</li>
+<li>时长：3 小时</li>
+</ul>
+<h3 id="Day24-2023-08-09"><a href="#Day24-2023-08-09" class="headerlink" title="Day24 - 2023.08.09"></a>Day24 - 2023.08.09</h3><ul>
+<li>欢乐 ACM 赛（ABCD）。</li>
+<li><a href="/contest/573830">比赛链接</a></li>
+<li>整理：hwy</li>
+<li>题目：12 道</li>
+<li>时长：5 小时</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104053/problem/E">
+    <img src="https://img.shields.io/badge/Gym-104053E-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104053/problem/H">
+    <img src="https://img.shields.io/badge/Gym-104053H-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104053/problem/L">
+    <img src="https://img.shields.io/badge/Gym-104053L-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1394/C">
+    <img src="https://img.shields.io/badge/CodeForces-1394C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103640/problem/K">
+    <img src="https://img.shields.io/badge/Gym-103640K-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103048/problem/K">
+    <img src="https://img.shields.io/badge/Gym-103048K-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103640/problem/F">
+    <img src="https://img.shields.io/badge/Gym-103640F-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1303/G">
+    <img src="https://img.shields.io/badge/CodeForces-1303G-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/102978/problem/F">
+    <img src="https://img.shields.io/badge/Gym-102978F-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1333/E">
+    <img src="https://img.shields.io/badge/CodeForces-1333E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/102978/problem/I">
+    <img src="https://img.shields.io/badge/Gym-102978I-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/104460/problem/L">
+    <img src="https://img.shields.io/badge/Gym-104460L-gree"/>
+</a>
+
+<h2 id="第五模块-图论-Day25-30"><a href="#第五模块-图论-Day25-30" class="headerlink" title="第五模块 - 图论 - Day25~30"></a>第五模块 - 图论 - Day25~30</h2><h3 id="Day25-2023-08-10"><a href="#Day25-2023-08-10" class="headerlink" title="Day25 - 2023.08.10"></a>Day25 - 2023.08.10</h3><ul>
+<li>专题：基础图论（拓扑排序、最短路、最小⽣成树、强连通、双连通、Tarjan 算法）</li>
+<li>讲师：dcx</li>
+<li>题目：28 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4151">
+    <img src="https://img.shields.io/badge/洛谷-P4151-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/513">
+    <img src="https://img.shields.io/badge/UniversalOJ-513-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/528/C">
+    <img src="https://img.shields.io/badge/CodeForces-528C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-3569">
+    <img src="https://img.shields.io/badge/黑暗爆炸-3569-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1347">
+    <img src="https://img.shields.io/badge/洛谷-P1347-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4562">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4562-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2109">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2109-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4010">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4010-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7831">
+    <img src="https://img.shields.io/badge/洛谷-P7831-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5284">
+    <img src="https://img.shields.io/badge/洛谷-P5284-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4779">
+    <img src="https://img.shields.io/badge/洛谷-P4779-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5471">
+    <img src="https://img.shields.io/badge/洛谷-P5471-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/512">
+    <img src="https://img.shields.io/badge/UniversalOJ-512-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-1641">
+    <img src="https://img.shields.io/badge/黑暗爆炸-1641-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3611">
+    <img src="https://img.shields.io/badge/洛谷-B3611-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3366">
+    <img src="https://img.shields.io/badge/洛谷-P3366-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/888/G">
+    <img src="https://img.shields.io/badge/CodeForces-888G-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/17462">
+    <img src="https://img.shields.io/badge/Baekjoon-17462-rgb(255, 199, 123)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=6722">
+    <img src="https://img.shields.io/badge/HDU-6722-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2180">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2180-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/2469">
+    <img src="https://img.shields.io/badge/LibreOJ-2469-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3684">
+    <img src="https://img.shields.io/badge/洛谷-P3684-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4768">
+    <img src="https://img.shields.io/badge/洛谷-P4768-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8435">
+    <img src="https://img.shields.io/badge/洛谷-P8435-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8436">
+    <img src="https://img.shields.io/badge/洛谷-P8436-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3609">
+    <img src="https://img.shields.io/badge/洛谷-B3609-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/160/D">
+    <img src="https://img.shields.io/badge/CodeForces-160D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7123">
+    <img src="https://img.shields.io/badge/洛谷-P7123-blue" />
+</a>
+
+<h3 id="Day26-2023-08-11"><a href="#Day26-2023-08-11" class="headerlink" title="Day26 - 2023.08.11"></a>Day26 - 2023.08.11</h3><ul>
+<li>专题：同余 BFS、差分约束、2-SAT、Tarjan LCA、欧拉回路、三四元环、最小树形图</li>
+<li>讲师：dcx</li>
+<li>题目：18 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://uoj.ac/problem/117">
+    <img src="https://img.shields.io/badge/UniversalOJ-117-purple"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/547/D">
+    <img src="https://img.shields.io/badge/CodeForces-547D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/20086">
+    <img src="https://img.shields.io/badge/Baekjoon-20086-rgb(255, 199, 123)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/13973">
+    <img src="https://img.shields.io/badge/Baekjoon-13973-rgb(255, 199, 123)"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4782">
+    <img src="https://img.shields.io/badge/洛谷-P4782-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3825">
+    <img src="https://img.shields.io/badge/洛谷-P3825-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6036">
+    <img src="https://img.shields.io/badge/LibreOJ-6036-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5297">
+    <img src="https://img.shields.io/badge/洛谷-P5297-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2612">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2612-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5960">
+    <img src="https://img.shields.io/badge/洛谷-P5960-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7515">
+    <img src="https://img.shields.io/badge/洛谷-P7515-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1969">
+    <img src="https://img.shields.io/badge/洛谷-P1969-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=6184">
+    <img src="https://img.shields.io/badge/HDU-6184-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6076">
+    <img src="https://img.shields.io/badge/LibreOJ-6076-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=5960">
+    <img src="https://img.shields.io/badge/HDU-5960-rgb(0, 210, 211)" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6254">
+    <img src="https://img.shields.io/badge/LibreOJ-6254-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/3322">
+    <img src="https://img.shields.io/badge/LibreOJ-3322-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5163">
+    <img src="https://img.shields.io/badge/洛谷-P5163-blue" />
+</a>
+
+<h3 id="Day27-2023-08-12"><a href="#Day27-2023-08-12" class="headerlink" title="Day27 - 2023.08.12"></a>Day27 - 2023.08.12</h3><ul>
+<li>专题：二分图匹配（匈牙利算法、KM 算法）、网络流算法（EK、Dinic、费用流）</li>
+<li>讲师：dcx</li>
+<li>题目：23 题</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-1143">
+    <img src="https://img.shields.io/badge/黑暗爆炸-1143-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2437">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2437-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6062">
+    <img src="https://img.shields.io/badge/LibreOJ-6062-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4788">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4788-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6577">
+    <img src="https://img.shields.io/badge/洛谷-P6577-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3376">
+    <img src="https://img.shields.io/badge/洛谷-P3376-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2766">
+    <img src="https://img.shields.io/badge/洛谷-P2766-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3254">
+    <img src="https://img.shields.io/badge/洛谷-P3254-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-1066">
+    <img src="https://img.shields.io/badge/黑暗爆炸-1066-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6003">
+    <img src="https://img.shields.io/badge/LibreOJ-6003-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1404/E">
+    <img src="https://img.shields.io/badge/CodeForces-1404E-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2762">
+    <img src="https://img.shields.io/badge/洛谷-P2762-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-1391">
+    <img src="https://img.shields.io/badge/黑暗爆炸-1391-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-3144">
+    <img src="https://img.shields.io/badge/黑暗爆炸-3144-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4663">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4663-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://community.topcoder.com/stat?c=problem_statement&pm=14719">
+    <img src="https://img.shields.io/badge/TopCoder-14719-white"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-3894">
+    <img src="https://img.shields.io/badge/黑暗爆炸-3894-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-3774">
+    <img src="https://img.shields.io/badge/黑暗爆炸-3774-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2039">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2039-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-3218">
+    <img src="https://img.shields.io/badge/黑暗爆炸-3218-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1517/G">
+    <img src="https://img.shields.io/badge/CodeForces-1517G-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/103861/problem/H">
+    <img src="https://img.shields.io/badge/Gym-103861H-gree"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3381">
+    <img src="https://img.shields.io/badge/洛谷-P3381-blue" />
+</a>
+
+<h3 id="Day28-2023-08-13"><a href="#Day28-2023-08-13" class="headerlink" title="Day28 - 2023.08.13"></a>Day28 - 2023.08.13</h3><ul>
+<li>专题：线性规划与对偶、网络流建模、增流退流、上下界流</li>
+<li>讲师：dcx</li>
+<li>题目：20 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3357">
+    <img src="https://img.shields.io/badge/洛谷-P3357-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7425">
+    <img src="https://img.shields.io/badge/洛谷-P7425-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6079">
+    <img src="https://img.shields.io/badge/LibreOJ-6079-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/6068">
+    <img src="https://img.shields.io/badge/LibreOJ-6068-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-1070">
+    <img src="https://img.shields.io/badge/黑暗爆炸-1070-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2879">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2879-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4249">
+    <img src="https://img.shields.io/badge/洛谷-P4249-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4003">
+    <img src="https://img.shields.io/badge/洛谷-P4003-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1288/F">
+    <img src="https://img.shields.io/badge/CodeForces-1288F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2304">
+    <img src="https://img.shields.io/badge/洛谷-P2304-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3980">
+    <img src="https://img.shields.io/badge/洛谷-P3980-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3308">
+    <img src="https://img.shields.io/badge/洛谷-P3308-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/671/D">
+    <img src="https://img.shields.io/badge/CodeForces-671D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-2034">
+    <img src="https://img.shields.io/badge/黑暗爆炸-2034-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-5326">
+    <img src="https://img.shields.io/badge/黑暗爆炸-5326-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1209/H">
+    <img src="https://img.shields.io/badge/CodeForces-1209H-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5653">
+    <img src="https://img.shields.io/badge/洛谷-P5653-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://vjudge.net/problem/黑暗爆炸-4977">
+    <img src="https://img.shields.io/badge/黑暗爆炸-4977-black" />
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4011">
+    <img src="https://img.shields.io/badge/洛谷-P4011-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/gym/102201/problem/J">
+    <img src="https://img.shields.io/badge/Gym-102201J-gree"/>
+</a>
+
+
+<h3 id="Day29-2023-08-14"><a href="#Day29-2023-08-14" class="headerlink" title="Day29 - 2023.08.14"></a>Day29 - 2023.08.14</h3><ul>
+<li>专题：杂题选讲</li>
+<li>讲师：叶子川</li>
+<li>题目：8 道</li>
+</ul>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1364/D">
+    <img src="https://img.shields.io/badge/CodeForces-1364D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1103/C">
+    <img src="https://img.shields.io/badge/CodeForces-1103C-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://loj.ac/p/3176">
+    <img src="https://img.shields.io/badge/LibreOJ-3176-brown"/>
+</a>
+<a target="_blank" rel="noopener" href="https://qoj.ac/problem/5254">
+    <img src="https://img.shields.io/badge/QOJ-5254-red"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1746/F">
+    <img src="https://img.shields.io/badge/CodeForces-1746F-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1479/D">
+    <img src="https://img.shields.io/badge/CodeForces-1479D-green"/>
+</a>
+<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8819">
+    <img src="https://img.shields.io/badge/洛谷-P8819-blue" />
+</a>
+<a target="_blank" rel="noopener" href="https://qoj.ac/problem/5825">
+    <img src="https://img.shields.io/badge/QOJ-5825-red"/>
+</a>
+
+
+<hr>
+</div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/9856.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Tarjan缩点</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/14141.html"><span class="level-item">BellmanFord的优化：SPFA算法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#"><span class="level-left"><span class="level-item">1</span><span class="level-item">
+ZR 2023 Summer  C  Workbook 
+</span></span></a></li><li><a class="level is-mobile" href="#第一模块-数据结构-Day-1-7"><span class="level-left"><span class="level-item">2</span><span class="level-item">第一模块 - 数据结构 - Day 1~7</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Day1-2023-07-17"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Day1 - 2023.07.17</span></span></a></li><li><a class="level is-mobile" href="#Day2-2023-07-18"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">Day2 - 2023.07.18</span></span></a></li><li><a class="level is-mobile" href="#Day3-2023-07-19"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">Day3 - 2023.07.19</span></span></a></li><li><a class="level is-mobile" href="#Day4-2023-07-20"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Day4 - 2023.07.20</span></span></a></li><li><a class="level is-mobile" href="#Day5-2023-07-21"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Day5 - 2023.07.21</span></span></a></li><li><a class="level is-mobile" href="#Day6-2023-07-22"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">Day6 - 2023.07.22</span></span></a></li><li><a class="level is-mobile" href="#Day7-2023-07-23"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">Day7 - 2023.07.23</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第二模块-动态规划-Day-8-12"><span class="level-left"><span class="level-item">3</span><span class="level-item">第二模块 - 动态规划 - Day 8~12</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Day8-2023-07-24"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">Day8 - 2023.07.24</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#例题"><span class="level-left"><span class="level-item">3.1.1</span><span class="level-item">例题</span></span></a></li><li><a class="level is-mobile" href="#作业"><span class="level-left"><span class="level-item">3.1.2</span><span class="level-item">作业</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Day9-2023-07-25"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">Day9 - 2023.07.25</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#例题-1"><span class="level-left"><span class="level-item">3.2.1</span><span class="level-item">例题</span></span></a></li><li><a class="level is-mobile" href="#作业-1"><span class="level-left"><span class="level-item">3.2.2</span><span class="level-item">作业</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Day10-2023-07-26"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">Day10 - 2023.07.26</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#例题-2"><span class="level-left"><span class="level-item">3.3.1</span><span class="level-item">例题</span></span></a></li><li><a class="level is-mobile" href="#作业-2"><span class="level-left"><span class="level-item">3.3.2</span><span class="level-item">作业</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Day11-2023-07-27"><span class="level-left"><span class="level-item">3.4</span><span class="level-item">Day11 - 2023.07.27</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#例题-3"><span class="level-left"><span class="level-item">3.4.1</span><span class="level-item">例题</span></span></a></li><li><a class="level is-mobile" href="#作业-3"><span class="level-left"><span class="level-item">3.4.2</span><span class="level-item">作业</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Day12-2023-07-28"><span class="level-left"><span class="level-item">3.5</span><span class="level-item">Day12 - 2023.07.28</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第三模块-数学、数论-Day13-19"><span class="level-left"><span class="level-item">4</span><span class="level-item">第三模块 - 数学、数论 - Day13~19</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Day13-2023-07-29"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">Day13 - 2023.07.29</span></span></a></li><li><a class="level is-mobile" href="#Day14-2023-07-30"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">Day14 - 2023.07.30</span></span></a></li><li><a class="level is-mobile" href="#Day15-2023-07-31"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">Day15 - 2023.07.31</span></span></a></li><li><a class="level is-mobile" href="#Day16-2023-08-01"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">Day16 - 2023.08.01</span></span></a></li><li><a class="level is-mobile" href="#Day17-2023-08-02"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">Day17 - 2023.08.02</span></span></a></li><li><a class="level is-mobile" href="#Day18-2023-08-03"><span class="level-left"><span class="level-item">4.6</span><span class="level-item">Day18 - 2023.08.03</span></span></a></li><li><a class="level is-mobile" href="#Day19-2023-08-04"><span class="level-left"><span class="level-item">4.7</span><span class="level-item">Day19 - 2023.08.04</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第四模块-字符串-Day20-24"><span class="level-left"><span class="level-item">5</span><span class="level-item">第四模块 - 字符串 - Day20~24</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Day20-2023-08-05"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">Day20 - 2023.08.05</span></span></a></li><li><a class="level is-mobile" href="#Day21-2023-08-06"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">Day21 - 2023.08.06</span></span></a></li><li><a class="level is-mobile" href="#Day22-2023-08-07"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">Day22 - 2023.08.07</span></span></a></li><li><a class="level is-mobile" href="#Day23-2023-08-08"><span class="level-left"><span class="level-item">5.4</span><span class="level-item">Day23 - 2023.08.08</span></span></a></li><li><a class="level is-mobile" href="#Day24-2023-08-09"><span class="level-left"><span class="level-item">5.5</span><span class="level-item">Day24 - 2023.08.09</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第五模块-图论-Day25-30"><span class="level-left"><span class="level-item">6</span><span class="level-item">第五模块 - 图论 - Day25~30</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Day25-2023-08-10"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">Day25 - 2023.08.10</span></span></a></li><li><a class="level is-mobile" href="#Day26-2023-08-11"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">Day26 - 2023.08.11</span></span></a></li><li><a class="level is-mobile" href="#Day27-2023-08-12"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">Day27 - 2023.08.12</span></span></a></li><li><a class="level is-mobile" href="#Day28-2023-08-13"><span class="level-left"><span class="level-item">6.4</span><span class="level-item">Day28 - 2023.08.13</span></span></a></li><li><a class="level is-mobile" href="#Day29-2023-08-14"><span class="level-left"><span class="level-item">6.5</span><span class="level-item">Day29 - 2023.08.14</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

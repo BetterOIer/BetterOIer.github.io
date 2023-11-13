@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Git版本控制 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="入门使Git前，需要先建立一个仓库(repository)。您可以使用一个已经存在的目录作为Git仓库或创建一个空目录。"><meta property="og:type" content="blog"><meta property="og:title" content="Git版本控制"><meta property="og:url" content="http://betteroier.site/posts/64901.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="入门使Git前，需要先建立一个仓库(repository)。您可以使用一个已经存在的目录作为Git仓库或创建一个空目录。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/img/og_image.png"><meta property="article:published_time" content="2023-01-17T05:17:23.000Z"><meta property="article:modified_time" content="2023-11-13T07:41:32.837Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="IT"><meta property="article:tag" content="Git"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/64901.html"},"headline":"Git版本控制","image":["http://betteroier.site/img/og_image.png"],"datePublished":"2023-01-17T05:17:23.000Z","dateModified":"2023-11-13T07:41:32.837Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"入门使Git前，需要先建立一个仓库(repository)。您可以使用一个已经存在的目录作为Git仓库或创建一个空目录。"}</script><link rel="canonical" href="http://betteroier.site/posts/64901.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-17T05:17:23.000Z" title="2023/1/17 13:17:23">2023-01-17</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">Git版本控制</h1><div class="content"><h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>使<code>Git</code>前，需要先建立一个仓库(<code>repository</code>)。您可以使用一个已经存在的目录作为<code>Git仓库</code>或<code>创建一个空目录</code>。</p>
+<span id="more"></span>
+
+<p>使用您当前目录作为<code>Git仓库</code>，我们只需使它<code>初始化</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>使用我们指定目录作为<code>Git仓库</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init newrepo</span><br></pre></td></tr></table></figure>
+<p>从现在开始，我们将假设您在<code>Git仓库</code>根目录下，除非另有说明。</p>
+<h2 id="添加新文件"><a href="#添加新文件" class="headerlink" title="添加新文件"></a>添加新文件</h2><p>我们有一个仓库，但什么也没有，可以使用<code>add</code>命令添加文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add filename</span><br></pre></td></tr></table></figure>
+<p>可以使用<code>add ... </code>继续添加任务文件。</p>
+<h2 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本"></a>提交版本</h2><p>现在我们已经添加了这些文件，我们希望它们能够真正被保存在<code>Git仓库</code>。</p>
+<p>为此，我们将它们提交到仓库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;Adding files&quot;</span><br></pre></td></tr></table></figure>
+<p>如果您不使用<code>-m</code>，会出现编辑器来让你写自己的注释信息。</p>
+<p>当我们修改了很多文件，而不想每一个都<code>add</code>，想<code>commit</code>自动来提交本地修改，我们可以使用<code>-a</code>标识。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a -m &quot;Changed some files&quot;</span><br></pre></td></tr></table></figure>
+<p><code>git commit</code> 命令的<code>-a</code>选项可将所有被修改或者已删除的且已经被<code>git</code>管理的文档提交到仓库中。</p>
+<p>千万注意，<code>-a</code>不会造成新文件被提交，只能修改。</p>
+<h2 id="发布版本"><a href="#发布版本" class="headerlink" title="发布版本"></a>发布版本</h2><p>我们先从服务器克隆一个库并上传。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone ssh://example.com/~/www/project.git</span><br></pre></td></tr></table></figure>
+<p>现在我们修改之后可以进行推送到服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push ssh://example.com/~/www/project.git</span><br></pre></td></tr></table></figure>
+<h2 id="取回更新"><a href="#取回更新" class="headerlink" title="取回更新"></a>取回更新</h2><p>如果您已经按上面的进行<code>push</code>，下面命令表示，当前分支自动与唯一一个追踪分支进行合并。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p>从非默认位置更新到指定的<code>url</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull http://git.example.com/project.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>如何你想从资源库中删除文件，我们使用<code>rm</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm &quot;file&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="分支与合并"><a href="#分支与合并" class="headerlink" title="分支与合并"></a>分支与合并</h2><p>分支在本地完成，速度快。要创建一个新的分支，我们使用<code>branch</code>命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch test</span><br></pre></td></tr></table></figure>
+<p><code>branch</code>命令不会将我们带入分支，只是创建一个新分支。所以我们使用<code>checkout</code>命令来更改分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout test</span><br></pre></td></tr></table></figure>
+<p>第一个分支，或主分支，被称为<code>&quot;master&quot;</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+<p>对其他分支的更改不会反映在主分支上。如果想将更改提交到主分支，则需切换回<code>master</code>分支，然后使用合并。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<p>如果您想删除分支，我们使用<code>-d</code>标识。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d test</span><br></pre></td></tr></table></figure></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/IT/">IT</a><a class="link-muted mr-2" rel="tag" href="/tags/Git/">Git</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/21383.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">三角函数</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/19813.html"><span class="level-item">Ubuntu关闭图形界面</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#入门"><span class="level-left"><span class="level-item">1</span><span class="level-item">入门</span></span></a></li><li><a class="level is-mobile" href="#添加新文件"><span class="level-left"><span class="level-item">2</span><span class="level-item">添加新文件</span></span></a></li><li><a class="level is-mobile" href="#提交版本"><span class="level-left"><span class="level-item">3</span><span class="level-item">提交版本</span></span></a></li><li><a class="level is-mobile" href="#发布版本"><span class="level-left"><span class="level-item">4</span><span class="level-item">发布版本</span></span></a></li><li><a class="level is-mobile" href="#取回更新"><span class="level-left"><span class="level-item">5</span><span class="level-item">取回更新</span></span></a></li><li><a class="level is-mobile" href="#删除"><span class="level-left"><span class="level-item">6</span><span class="level-item">删除</span></span></a></li><li><a class="level is-mobile" href="#分支与合并"><span class="level-left"><span class="level-item">7</span><span class="level-item">分支与合并</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

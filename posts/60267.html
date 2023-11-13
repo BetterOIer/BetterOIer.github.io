@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>DEBUG备忘录 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="写代码"><meta property="og:type" content="blog"><meta property="og:title" content="DEBUG备忘录"><meta property="og:url" content="http://betteroier.site/posts/60267.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="写代码"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/img/og_image.png"><meta property="article:published_time" content="2023-07-21T10:33:36.000Z"><meta property="article:modified_time" content="2023-11-13T07:38:46.427Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="技巧"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/60267.html"},"headline":"DEBUG备忘录","image":["http://betteroier.site/img/og_image.png"],"datePublished":"2023-07-21T10:33:36.000Z","dateModified":"2023-11-13T07:38:46.427Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"写代码"}</script><link rel="canonical" href="http://betteroier.site/posts/60267.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-21T10:33:36.000Z" title="2023/7/21 18:33:36">2023-07-21</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">DEBUG备忘录</h1><div class="content"><h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><span id="more"></span>
+
+<ol>
+<li>题目中要输入$n$、$m$,不要在应该用$n$的地方用$m$。</li>
+<li><code>long long</code>要开吗？你开了吗？哪些要开那些不要开？整形默认是<code>int</code>,<code>1</code>要写成<code>1LL</code>。</li>
+<li>树形结构：递归往下的时候$l$和$r$有写反吗？</li>
+<li>取模了吗？你真的取完了吗？有些取模是负数，需要<code>(a%mod+mod)%mod</code></li>
+<li>未完待续。。。</li>
+</ol>
+<h2 id="知识性"><a href="#知识性" class="headerlink" title="知识性"></a>知识性</h2><ol>
+<li><p>ASCII码是<strong>7</strong>位二进制编码，以<strong>8</strong>位存储。</p>
+<!-- more --></li>
+<li><p>二分查找找不到数据时：</p>
+<ul>
+<li>最多查找次数： $\left \lfloor \log_2n \right \rfloor+1$</li>
+<li>最少查找次数：$\left \lfloor \log_2(n+1) \right \rfloor$</li>
+</ul>
+</li>
+<li><p>布尔型变量占用<strong>1</strong>字节，<strong>8</strong>比特。</p>
+</li>
+<li><p>冒泡排序为<strong>稳定排序</strong>，时间复杂度为$O(n^2)$。</p>
+</li>
+<li><p>十进制小数转二进制：乘2取整，顺序排列</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">如：0.625=（0.101）B</span><br><span class="line">0.625*2=1.25======取出整数部分1</span><br><span class="line">0.25*2=0.5========取出整数部分0</span><br><span class="line">0.5*2=1==========取出整数部分1</span><br><span class="line"></span><br><span class="line">再如：0.7=（0.1 0110 0110...）B</span><br><span class="line">0.7*2=1.4========取出整数部分1</span><br><span class="line">0.4*2=0.8========取出整数部分0</span><br><span class="line">0.8*2=1.6========取出整数部分1</span><br><span class="line">0.6*2=1.2========取出整数部分1</span><br><span class="line">0.2*2=0.4========取出整数部分0</span><br><span class="line">0.4*2=0.8========取出整数部分0</span><br><span class="line">0.8*2=1.6========取出整数部分1</span><br><span class="line">0.6*2=1.2========取出整数部分1</span><br><span class="line">0.2*2=0.4========取出整数部分0</span><br></pre></td></tr></table></figure></li>
+<li><p>各种排序的时间复杂度:  </p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">最好</th>
+<th align="center">平均</th>
+<th align="center">最坏</th>
+<th align="center">稳定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">插入排序</td>
+<td align="center">$O(n)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td align="center">希尔排序(插入排序优化)</td>
+<td align="center">$O(n)$</td>
+<td align="center">$O(n \times 1.3)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td align="center">选择排序</td>
+<td align="center">$O(n)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td align="center">堆排序</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td align="center">冒泡排序</td>
+<td align="center">$O(n)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td align="center">快速排序</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n^2)$</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td align="center">归并排序</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">$O(n \log_2n)$</td>
+<td align="center">稳定</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>逻辑运算符优先级:<br>$﹁$高于$∧$，$∧$高于$∨$，$∨$高于$→$</p>
+</li>
+<li><p>时间复杂度主定理：<br>对于时间复杂度满足如下递推式：$T(n)&#x3D;aT(\frac{n}{b})+f(n)$<br>如果$f\left ( n \right ) &lt; O\left ( n^{log_ba} \right )$，则$T\left ( n \right ) &#x3D; \Theta \left ( n^{log_ba} \right )$<br> 如果$f\left ( n \right ) &#x3D; \Theta \left ( n^{log_ba}log^{k}n \right )$，则$T\left ( n \right ) &#x3D; \Theta \left ( n^{log_ba} log^{k+1}n \right )$<br> 如果$f\left ( n \right ) &gt; \Omega \left ( n^{log_ba} \right )$，则$T\left ( n \right ) &#x3D; \Theta \left (f\left ( n \right ) \right )$<br> 例子：<br> $T\left ( n \right ) &#x3D; 3T\left ( n&#x2F;2 \right ) + n^{2}$ 解$a &#x3D; 3, b &#x3D; 2, f\left ( n \right ) &#x3D; n^{2}$ 那么$log_ba &#x3D; log_23$ ，那么$f\left ( n \right ) &gt; n^{2}$，根据主定理有$T\left ( n \right ) &#x3D; O\left ( n^{2} \right )$  </p>
+<p> $T\left ( n \right ) &#x3D; 4T\left ( n&#x2F;2 \right ) + n^{2}$解$a &#x3D; 4, b &#x3D; 3, f\left ( n \right ) &#x3D; n^{2}$那么$log_ba &#x3D; log_24$，那么$f\left ( n \right ) &#x3D; n^{2}$，根据主定理有$T\left ( n \right ) &#x3D; O\left ( n^{2}log_2n \right )$    </p>
+<p> $T\left ( n \right ) &#x3D; T\left ( n&#x2F;2 \right ) + 2^{n}$，解$a &#x3D; 1, b &#x3D; 2, f\left ( n \right ) &#x3D; 2^{n}$那么$log_ba &#x3D; log_21$，那么$f\left ( n \right ) &gt; n^{0}$，根据主定理有$T\left ( n \right ) &#x3D; O\left ( 2^{n} \right )$  </p>
+<p> $T\left ( n \right ) &#x3D; 2^{n}T\left ( n&#x2F;2 \right ) + n^{n}$，解$a &#x3D; 2^{n}, b &#x3D; 2, f\left ( n \right ) &#x3D; n^{n}$那么因为a不是常数，所以不适用于主定理  </p>
+<p> $T\left ( n \right ) &#x3D; 16T\left ( n&#x2F;4 \right ) + n$，解$a&#x3D;16, b &#x3D; 4, f\left ( n \right ) &#x3D; n$那么$log_ba &#x3D; log_416$，那么$f\left ( n \right ) &lt; n^{2}$，根据主定理有$T\left ( n \right ) &#x3D; O\left ( n^{2} \right )$  </p>
+</li>
+<li><p>渐进符号</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>想当于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Θ（西塔）</td>
+<td>紧确界。</td>
+<td>相当于”&#x3D;”</td>
+</tr>
+<tr>
+<td>O （大欧）</td>
+<td>上界。</td>
+<td>相当于”&lt;&#x3D;”</td>
+</tr>
+<tr>
+<td>o（小欧）</td>
+<td>非紧的上界。</td>
+<td>相当于”&lt;”</td>
+</tr>
+<tr>
+<td>Ω（大欧米伽）</td>
+<td>下界。</td>
+<td>相当于”&gt;&#x3D;”</td>
+</tr>
+<tr>
+<td>ω（小欧米伽）</td>
+<td>非紧的下界。</td>
+<td>相当于”&gt;”</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/55889.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">可持久化数据结构</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/34833.html"><span class="level-item">Pandas笔记</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#写代码"><span class="level-left"><span class="level-item">1</span><span class="level-item">写代码</span></span></a></li><li><a class="level is-mobile" href="#知识性"><span class="level-left"><span class="level-item">2</span><span class="level-item">知识性</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

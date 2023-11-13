@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Consolas';
+    font-display: swap;
+    src: url('../font/consola.ttf') format("truetype");
+}
+
+body, button, input, select, textarea {
+    font-family: dhtfr;
+}
+code, pre {
+    font-family: Consolas;
+}
+
+article.article .content {
+    font-size: 1.2rem;
+}
+body {
+    font-size: 1.1em;
+}
+
+.navbar-main .navbar-item {
+    padding: 0.25rem 0.75rem;
+}
+
+.navbar-logo img {
+    max-height: 2.45rem;
+}
+.title.is-3 {
+    font-size: 2.3rem;
+}

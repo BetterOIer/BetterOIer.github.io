@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Windows系统安装部署 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本教程将尽可能以最简练的方式向大家展示Windows系统的安装："><meta property="og:type" content="blog"><meta property="og:title" content="Windows系统安装部署"><meta property="og:url" content="http://betteroier.site/posts/65307.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="本教程将尽可能以最简练的方式向大家展示Windows系统的安装："><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/image/WD1.png"><meta property="og:image" content="http://betteroier.site/image/WD2.png"><meta property="og:image" content="http://betteroier.site/image/WD3.png"><meta property="og:image" content="http://betteroier.site/image/WD4.png"><meta property="article:published_time" content="2022-12-22T14:42:04.000Z"><meta property="article:modified_time" content="2023-11-13T07:53:18.745Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="IT"><meta property="article:tag" content="Windows"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/image/WD1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/65307.html"},"headline":"Windows系统安装部署","image":["http://betteroier.site/image/WD1.png","http://betteroier.site/image/WD2.png","http://betteroier.site/image/WD3.png","http://betteroier.site/image/WD4.png"],"datePublished":"2022-12-22T14:42:04.000Z","dateModified":"2023-11-13T07:53:18.745Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"本教程将尽可能以最简练的方式向大家展示Windows系统的安装："}</script><link rel="canonical" href="http://betteroier.site/posts/65307.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-12-22T14:42:04.000Z" title="2022/12/22 22:42:04">2022-12-22</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">Windows系统安装部署</h1><div class="content"><p>本教程将尽可能以最简练的方式向大家展示<code>Windows</code>系统的安装：</p>
+<span id="more"></span>
+
+<ol>
+<li>确认安装方式</li>
+<li>确认安装体系</li>
+<li>下载系统</li>
+<li>下载驱动</li>
+<li>安装系统</li>
+</ol>
+<h2 id="确认安装方式"><a href="#确认安装方式" class="headerlink" title="确认安装方式"></a>确认安装方式</h2><p>一般重装系统有三种方法：</p>
+<ul>
+<li>U盘&#x2F;光盘 重装 (推荐，操作错误还能重新尝试) <ul>
+<li>U盘制作启动盘进入PE重装（推荐，制作启动盘后以后将能一盘多用，例如维护，修复系统呀，系统崩溃后还原数据呀等等）</li>
+<li>U盘烧录ISO镜像文件进行重装（比较推荐，简单，向导式重装，但是以后不能够用于维护系统）</li>
+</ul>
+</li>
+<li>在当前系统下进行本地安装</li>
+</ul>
+<h2 id="确认安装体系"><a href="#确认安装体系" class="headerlink" title="确认安装体系"></a>确认安装体系</h2><p>电脑系统安装体系有两种</p>
+<table>
+<thead>
+<tr>
+<th align="center">体系</th>
+<th align="center">对应硬盘格式</th>
+<th align="center">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$Legacy$</td>
+<td align="center">$MBR$</td>
+<td align="center">不能识别超过<code>3TB</code>的硬盘，启动速度较慢，只能有<code>3</code>个主分区</td>
+</tr>
+<tr>
+<td align="center">$UEFI$</td>
+<td align="center">$GPT$</td>
+<td align="center">较新的引导方法，能解决$Legacy$不能处理的问题，较旧的电脑可能不支持</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="下载系统"><a href="#下载系统" class="headerlink" title="下载系统"></a>下载系统</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>这里建议从👉<a target="_blank" rel="noopener" href="https://next.itellyou.cn/">NEXT, ITELLYOU</a>下载</p>
+<article class="message is-danger"><div class="message-body">
+<p>请不要下载<code>Ghost</code>系统镜像（如雨林木风、番茄花园、系统之家、装机员系统等）,会夹带私货，或系统不稳定</p>
+</div></article>
+
+<ol>
+<li><p>注册账号或QQ登入<br><img src="/../image/WD1.png"></p>
+</li>
+<li><p>选择系统，由于这篇教程安装<code>Windows</code>，请选择<code>Windows</code>系统  </p>
+<article class="message is-warning"><div class="message-body">
+
+<p>需要<code>BT</code>或<code>ED2K</code>下载器:推荐👉<a target="_blank" rel="noopener" href="https://xl11.xunlei.com/">迅雷</a></p>
+</div></article>
+
+<p><img src="/../image/WD2.png">  </p>
+<article class="message is-success"><div class="message-body">
+<table>
+<thead>
+<tr>
+<th align="center">系统</th>
+<th align="center">版本</th>
+<th align="center">包含</th>
+<th align="center">推荐指数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Windows11</td>
+<td align="center">商业版(business editions)</td>
+<td align="center">专业版、企业版、教育版、专业工作站版、专业教育版</td>
+<td align="center">⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="center">Windows11</td>
+<td align="center">零售版(consumer editions)</td>
+<td align="center">家庭版、专业版、教育版、家庭单语言版、专业工作站版、专业教育版</td>
+<td align="center">⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="center">Windows10</td>
+<td align="center">商业版(business editions)</td>
+<td align="center">专业版、企业版、教育版、专业工作站版、专业教育版</td>
+<td align="center">⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="center">Windows10</td>
+<td align="center">零售版(consumer editions)</td>
+<td align="center">家庭版、专业版、教育版、家庭单语言版、专业工作站版、专业教育版</td>
+<td align="center">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="center">Windows10</td>
+<td align="center">企业长期服务版(LTSC)</td>
+<td align="center">LTSC版</td>
+<td align="center">⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="center">Windows8.1, Windows8, Windows7, WindowsVista, WindowsXP</td>
+<td align="center">请前往👉<a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">MSDN(旧站)</a>下载</td>
+<td align="center">……</td>
+<td align="center">⭐⭐</td>
+</tr>
+</tbody></table>
+</div></article></li>
+</ol>
+<h3 id="校验系统"><a href="#校验系统" class="headerlink" title="校验系统"></a>校验系统</h3><p><code>NEXT, ITELLYOU</code>网站提供<code>MD5</code>校验值，请<strong>务必</strong>校验系统<code>MD5</code>值</p>
+<ul>
+<li>方式1： 👉<a target="_blank" rel="noopener" href="http://betteroier.tpddns.cn:8888/file/2/iHasher-v0.2.exe">校验工具</a></li>
+<li>方式2：<br><code>Win</code>+<code>R</code>打开<code>cmd</code>,输入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -hashfile &quot;改成你下载的系统镜像名&quot; md5</span><br></pre></td></tr></table></figure>
+比如你的文件是<code>Mirror.iso</code>,位置在<code>D:\</code>,终端中输入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -hashfile &quot;D:\Mirror.iso&quot; md5</span><br></pre></td></tr></table></figure>
+你得到<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MD5 hash of D:\Mirror.iso:</span><br><span class="line">494c35ad437ba453fe9ac28193b4232d</span><br><span class="line">CertUtil: -hashfile command completed successfully.</span><br></pre></td></tr></table></figure>
+其中<code>494c35ad437ba453fe9ac28193b4232d</code>为该镜像的<code>MD5</code>值</li>
+</ul>
+<p><progress class="progress is-success is-small" max="40"></progress></p>
+<h2 id="下载驱动"><a href="#下载驱动" class="headerlink" title="下载驱动"></a>下载驱动</h2><p>为防止某些电脑重装系统后出现网卡驱动未安装而无法进行下一步安装，进行系统安装前<strong>务必</strong>从当前主机的网卡的官网下载对应的<strong>网卡驱动</strong>  </p>
+<p>硬件检测工具：👉<a target="_blank" rel="noopener" href="http://betteroier.tpddns.cn:8888/file/2/%E9%B2%81%E5%A4%A7%E5%B8%88.exe">鲁大师绿色版</a></p>
+<p>如果不放心，可以下载所有需要的驱动：显卡、声卡、主板。</p>
+<p><progress class="progress is-success is-small" max="40"></progress></p>
+<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><h3 id="U盘制作启动盘安装"><a href="#U盘制作启动盘安装" class="headerlink" title="U盘制作启动盘安装"></a>U盘制作启动盘安装</h3><article class="message is-danger"><div class="message-body">
+<p>注意！你的U盘将会被格式化，请提前做好备份</p>
+</div></article>
+
+<p>使用👉<a target="_blank" rel="noopener" href="http://rufus.ie/zh/">Rufus</a>软件进行制作</p>
+<p><img src="/../image/WD3.png"></p>
+<p>打开软件：<br><img src="/../image/WD4.png"></p>
+<p>插入你要制作启动盘的设备</p>
+<p>选择你下载的镜像</p>
+<p>分区类型填写你选择的安装体系对应的硬盘格式(<code>GPT</code>或<code>MBR</code>)<br>目标系统类型将会自动填写<br>文件系统选择<code>NTFS</code></p>
+<article class="message is-danger"><div class="message-body">
+<p>你的U盘将会被格式化！！！请最后确认是否已备份！！！</p>
+</div></article>
+
+<p>准备好后点击<code>开始</code></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/IT/">IT</a><a class="link-muted mr-2" rel="tag" href="/tags/Windows/">Windows</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/8163.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">WOL(Wake On Lan)实现</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/32398.html"><span class="level-item">NOIP考试准备</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#确认安装方式"><span class="level-left"><span class="level-item">1</span><span class="level-item">确认安装方式</span></span></a></li><li><a class="level is-mobile" href="#确认安装体系"><span class="level-left"><span class="level-item">2</span><span class="level-item">确认安装体系</span></span></a></li><li><a class="level is-mobile" href="#下载系统"><span class="level-left"><span class="level-item">3</span><span class="level-item">下载系统</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#下载"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">下载</span></span></a></li><li><a class="level is-mobile" href="#校验系统"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">校验系统</span></span></a></li></ul></li><li><a class="level is-mobile" href="#下载驱动"><span class="level-left"><span class="level-item">4</span><span class="level-item">下载驱动</span></span></a></li><li><a class="level is-mobile" href="#安装系统"><span class="level-left"><span class="level-item">5</span><span class="level-item">安装系统</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#U盘制作启动盘安装"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">U盘制作启动盘安装</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

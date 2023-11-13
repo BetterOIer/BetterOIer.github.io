@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Pandas笔记 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="注意：这篇文档只适用于高考，完全不是Pandas文档。"><meta property="og:type" content="blog"><meta property="og:title" content="Pandas笔记"><meta property="og:url" content="http://betteroier.site/posts/34833.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="注意：这篇文档只适用于高考，完全不是Pandas文档。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/image/pandas01.png"><meta property="og:image" content="http://betteroier.site/image/pandas02.png"><meta property="article:published_time" content="2023-07-03T14:21:39.000Z"><meta property="article:modified_time" content="2023-11-13T07:43:11.820Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="IT"><meta property="article:tag" content="Python"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/image/pandas01.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/34833.html"},"headline":"Pandas笔记","image":["http://betteroier.site/image/pandas01.png","http://betteroier.site/image/pandas02.png"],"datePublished":"2023-07-03T14:21:39.000Z","dateModified":"2023-11-13T07:43:11.820Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"注意：这篇文档只适用于高考，完全不是Pandas文档。"}</script><link rel="canonical" href="http://betteroier.site/posts/34833.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-03T14:21:39.000Z" title="2023/7/3 22:21:39">2023-07-03</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">Pandas笔记</h1><div class="content"><p>注意：这篇文档只适用于<code>高考</code>，完全不是<code>Pandas</code>文档。</p>
+<span id="more"></span>
+<h1 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h1><p>提供数据：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">data01</th>
+<th align="center">data02</th>
+<th align="center">data03</th>
+<th align="center">data04</th>
+<th align="center">data05</th>
+<th align="center">data06</th>
+<th align="center">data07</th>
+<th align="center">data08</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">810</td>
+<td align="center">841</td>
+<td align="center">947</td>
+<td align="center">221</td>
+<td align="center">114</td>
+<td align="center">886</td>
+<td align="center">489</td>
+<td align="center">380</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">903</td>
+<td align="center">225</td>
+<td align="center">742</td>
+<td align="center">722</td>
+<td align="center">536</td>
+<td align="center">448</td>
+<td align="center">224</td>
+<td align="center">917</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">387</td>
+<td align="center">380</td>
+<td align="center">853</td>
+<td align="center">336</td>
+<td align="center">963</td>
+<td align="center">384</td>
+<td align="center">22</td>
+<td align="center">360</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">926</td>
+<td align="center">487</td>
+<td align="center">321</td>
+<td align="center">819</td>
+<td align="center">427</td>
+<td align="center">944</td>
+<td align="center">615</td>
+<td align="center">178</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">24</td>
+<td align="center">667</td>
+<td align="center">199</td>
+<td align="center">842</td>
+<td align="center">323</td>
+<td align="center">565</td>
+<td align="center">556</td>
+<td align="center">90</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">974</td>
+<td align="center">661</td>
+<td align="center">443</td>
+<td align="center">753</td>
+<td align="center">888</td>
+<td align="center">293</td>
+<td align="center">730</td>
+<td align="center">117</td>
+</tr>
+</tbody></table>
+<h2 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_excel(<span class="string">&quot;test.xlsx&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   ID  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1     813     620     621      63      31     883     860     236</span><br><span class="line">1   2     244      84     767     592     151     110     941     911</span><br><span class="line">2   3     339     776     993     779     699     247     230     239</span><br><span class="line">3   4     952     415     814     617     308     930     625     911</span><br><span class="line">4   5     812     706     378     959      52     700     711      54</span><br><span class="line">5   6     946     208     860      82     977     835     873     268</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>把首列设为<code>index</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_excel(<span class="string">&quot;test.xlsx&quot;</span>,index_col=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">ID</span><br><span class="line">1      813     620     621      63      31     883     860     236</span><br><span class="line">2      244      84     767     592     151     110     941     911</span><br><span class="line">3      339     776     993     779     699     247     230     239</span><br><span class="line">4      952     415     814     617     308     930     625     911</span><br><span class="line">5      812     706     378     959      52     700     711      54</span><br><span class="line">6      946     208     860      82     977     835     873     268</span><br></pre></td></tr></table></figure>
+
+<h2 id="一些操作"><a href="#一些操作" class="headerlink" title="一些操作"></a>一些操作</h2><h3 id="T"><a href="#T" class="headerlink" title=".T"></a>.T</h3><p>return <code>DataFrame</code></p>
+<p>行列转换</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_excel(<span class="string">&quot;test.xlsx&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.T)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">   ID  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1     813     620     621      63      31     883     860     236</span><br><span class="line">1   2     244      84     767     592     151     110     941     911</span><br><span class="line">2   3     339     776     993     779     699     247     230     239</span><br><span class="line">3   4     952     415     814     617     308     930     625     911</span><br><span class="line">4   5     812     706     378     959      52     700     711      54</span><br><span class="line">5   6     946     208     860      82     977     835     873     268</span><br><span class="line"></span><br><span class="line">          0    1    2    3    4    5</span><br><span class="line">ID        1    2    3    4    5    6</span><br><span class="line">data01  813  244  339  952  812  946</span><br><span class="line">data02  620   84  776  415  706  208</span><br><span class="line">data03  621  767  993  814  378  860</span><br><span class="line">data04   63  592  779  617  959   82</span><br><span class="line">data05   31  151  699  308   52  977</span><br><span class="line">data06  883  110  247  930  700  835</span><br><span class="line">data07  860  941  230  625  711  873</span><br><span class="line">data08  236  911  239  911   54  268</span><br></pre></td></tr></table></figure>
+
+<h3 id="at-index-columns"><a href="#at-index-columns" class="headerlink" title=".at[index,columns]"></a>.at[index,columns]</h3><h4 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h4><p>return values</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.at[<span class="number">5</span>,<span class="string">&quot;ID&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(df.at[<span class="number">4</span>,<span class="string">&quot;data06&quot;</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">700</span><br></pre></td></tr></table></figure>
+<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.at[<span class="number">4</span>,<span class="string">&quot;data06&quot;</span>])</span><br><span class="line">df.at[<span class="number">4</span>,<span class="string">&quot;data06&quot;</span>]=<span class="number">114</span></span><br><span class="line"><span class="built_in">print</span>(df.at[<span class="number">4</span>,<span class="string">&quot;data06&quot;</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">700</span><br><span class="line">114</span><br></pre></td></tr></table></figure>
+
+<h3 id="columns"><a href="#columns" class="headerlink" title=".columns"></a>.columns</h3><p>return 类似<code>list</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.columns)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Index([&#x27;ID&#x27;, &#x27;data01&#x27;, &#x27;data02&#x27;, &#x27;data03&#x27;, &#x27;data04&#x27;, &#x27;data05&#x27;, &#x27;data06&#x27;,</span><br><span class="line">       &#x27;data07&#x27;, &#x27;data08&#x27;],</span><br><span class="line">      dtype=&#x27;object&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="index"><a href="#index" class="headerlink" title=".index"></a>.index</h3><p>return 类似<code>list</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.index)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RangeIndex(start=0, stop=6, step=1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="pop-columns"><a href="#pop-columns" class="headerlink" title=".pop(columns)"></a>.pop(columns)</h3><p>删除某一列<br>然后将删除的值返回</p>
+<p>return <code>Series</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.pop(<span class="string">&quot;data05&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">   ID  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1     813     620     621      63      31     883     860     236</span><br><span class="line">1   2     244      84     767     592     151     110     941     911</span><br><span class="line">2   3     339     776     993     779     699     247     230     239</span><br><span class="line">3   4     952     415     814     617     308     930     625     911</span><br><span class="line">4   5     812     706     378     959      52     700     711      54</span><br><span class="line">5   6     946     208     860      82     977     835     873     268</span><br><span class="line"></span><br><span class="line">0     31</span><br><span class="line">1    151</span><br><span class="line">2    699</span><br><span class="line">3    308</span><br><span class="line">4     52</span><br><span class="line">5    977</span><br><span class="line">Name: data05, dtype: int64</span><br><span class="line"></span><br><span class="line">   ID  data01  data02  data03  data04  data06  data07  data08</span><br><span class="line">0   1     813     620     621      63     883     860     236</span><br><span class="line">1   2     244      84     767     592     110     941     911</span><br><span class="line">2   3     339     776     993     779     247     230     239</span><br><span class="line">3   4     952     415     814     617     930     625     911</span><br><span class="line">4   5     812     706     378     959     700     711      54</span><br><span class="line">5   6     946     208     860      82     835     873     268</span><br></pre></td></tr></table></figure>
+
+<h3 id="size"><a href="#size" class="headerlink" title=".size"></a>.size</h3><p>获取整个表格数据个数</p>
+<p>return <code>int</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.size)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">54</span><br></pre></td></tr></table></figure>
+
+<h3 id="count-axis-0-numeric-only-False"><a href="#count-axis-0-numeric-only-False" class="headerlink" title=".count(axis&#x3D;0, numeric_only&#x3D;False)"></a>.count(axis&#x3D;0, numeric_only&#x3D;False)</h3><p>return <code>Series</code></p>
+<p>更改数据：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">name</th>
+<th align="center">data01</th>
+<th align="center">data02</th>
+<th align="center">data03</th>
+<th align="center">data04</th>
+<th align="center">data05</th>
+<th align="center">data06</th>
+<th align="center">data07</th>
+<th align="center">data08</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">John</td>
+<td align="center">215</td>
+<td align="center">406</td>
+<td align="center">844</td>
+<td align="center">901</td>
+<td align="center">202</td>
+<td align="center">41</td>
+<td align="center">352</td>
+<td align="center">266</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Bob</td>
+<td align="center">308</td>
+<td align="center">612</td>
+<td align="center">528</td>
+<td align="center">546</td>
+<td align="center">39</td>
+<td align="center">95</td>
+<td align="center">146</td>
+<td align="center">163</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Michael</td>
+<td align="center">608</td>
+<td align="center">695</td>
+<td align="center">620</td>
+<td align="center">707</td>
+<td align="center">679</td>
+<td align="center">44</td>
+<td align="center">255</td>
+<td align="center">793</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Alice</td>
+<td align="center">466</td>
+<td align="center">275</td>
+<td align="center">154</td>
+<td align="center">519</td>
+<td align="center">193</td>
+<td align="center">529</td>
+<td align="center">338</td>
+<td align="center">480</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Merry</td>
+<td align="center">867</td>
+<td align="center">545</td>
+<td align="center">283</td>
+<td align="center">475</td>
+<td align="center">867</td>
+<td align="center">709</td>
+<td align="center">118</td>
+<td align="center">359</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Harry</td>
+<td align="center">975</td>
+<td align="center">195</td>
+<td align="center">980</td>
+<td align="center">997</td>
+<td align="center">218</td>
+<td align="center">734</td>
+<td align="center">546</td>
+<td align="center">338</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.count())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.count(axis=<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.count(numeric_only=<span class="literal">True</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">ID        6</span><br><span class="line">name      6</span><br><span class="line">data01    6</span><br><span class="line">data02    6</span><br><span class="line">data03    6</span><br><span class="line">data04    6</span><br><span class="line">data05    6</span><br><span class="line">data06    6</span><br><span class="line">data07    6</span><br><span class="line">data08    6</span><br><span class="line">dtype: int64</span><br><span class="line"></span><br><span class="line">0    10</span><br><span class="line">1    10</span><br><span class="line">2    10</span><br><span class="line">3    10</span><br><span class="line">4    10</span><br><span class="line">5    10</span><br><span class="line">dtype: int64</span><br><span class="line"></span><br><span class="line">ID        6</span><br><span class="line">data01    6</span><br><span class="line">data02    6</span><br><span class="line">data03    6</span><br><span class="line">data04    6</span><br><span class="line">data05    6</span><br><span class="line">data06    6</span><br><span class="line">data07    6</span><br><span class="line">data08    6</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="drop-labels-None-axis-0-index-None-columns-None"><a href="#drop-labels-None-axis-0-index-None-columns-None" class="headerlink" title=".drop(labels&#x3D;None, axis&#x3D;0, index&#x3D;None, columns&#x3D;None)"></a>.drop(labels&#x3D;None, axis&#x3D;0, index&#x3D;None, columns&#x3D;None)</h3><p>return <code>DataFrame</code></p>
+<h4 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line">df = df.drop(columns=[<span class="string">&quot;data02&quot;</span>,<span class="string">&quot;data03&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line">df = df.drop([<span class="string">&quot;data02&quot;</span>,<span class="string">&quot;data03&quot;</span>],axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">   ID     name  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1     John      73     479     984     435     550     396      80     660</span><br><span class="line">1   2      Bob      84     785     929     828     742      80     864     257</span><br><span class="line">2   3  Michael      80     444     874     345     141     172     906      61</span><br><span class="line">3   4    Alice     870     380     328     396     564     362     371     599</span><br><span class="line">4   5    Merry     668     997     189     113     410     969     542     332</span><br><span class="line">5   6    Harry     536     732     969     609     852     517     444     346</span><br><span class="line">   ID     name  data01  data04  data05  data06  data07  data08</span><br><span class="line">0   1     John      73     435     550     396      80     660</span><br><span class="line">1   2      Bob      84     828     742      80     864     257</span><br><span class="line">2   3  Michael      80     345     141     172     906      61</span><br><span class="line">3   4    Alice     870     396     564     362     371     599</span><br><span class="line">4   5    Merry     668     113     410     969     542     332</span><br><span class="line">5   6    Harry     536     609     852     517     444     346</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除行"><a href="#删除行" class="headerlink" title="删除行"></a>删除行</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line">df = df.drop([<span class="number">2</span>,<span class="number">5</span>])</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line">df = df.drop(index=[<span class="number">2</span>,<span class="number">5</span>])</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   ID     name  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1     John      73     479     984     435     550     396      80     660</span><br><span class="line">1   2      Bob      84     785     929     828     742      80     864     257</span><br><span class="line">2   3  Michael      80     444     874     345     141     172     906      61</span><br><span class="line">3   4    Alice     870     380     328     396     564     362     371     599</span><br><span class="line">4   5    Merry     668     997     189     113     410     969     542     332</span><br><span class="line">5   6    Harry     536     732     969     609     852     517     444     346</span><br><span class="line">   ID   name  data01  data02  data03  data04  data05  data06  data07  data08</span><br><span class="line">0   1   John      73     479     984     435     550     396      80     660</span><br><span class="line">1   2    Bob      84     785     929     828     742      80     864     257</span><br><span class="line">3   4  Alice     870     380     328     396     564     362     371     599</span><br><span class="line">4   5  Merry     668     997     189     113     410     969     542     332</span><br></pre></td></tr></table></figure>
+
+<h3 id="groupby-axis-0-as-index-True-sort-True"><a href="#groupby-axis-0-as-index-True-sort-True" class="headerlink" title=".groupby(axis&#x3D;0, as_index&#x3D;True, sort&#x3D;True)"></a>.groupby(axis&#x3D;0, as_index&#x3D;True, sort&#x3D;True)</h3><p>return <code>DataFrameGroupBy</code></p>
+<p>更改数据：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">name</th>
+<th align="center">data01</th>
+<th align="center">data02</th>
+<th align="center">data03</th>
+<th align="center">data04</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">John</td>
+<td align="center">285</td>
+<td align="center">53</td>
+<td align="center">863</td>
+<td align="center">853</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Bob</td>
+<td align="center">349</td>
+<td align="center">568</td>
+<td align="center">33</td>
+<td align="center">322</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Michael</td>
+<td align="center">886</td>
+<td align="center">840</td>
+<td align="center">91</td>
+<td align="center">726</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Alice</td>
+<td align="center">67</td>
+<td align="center">752</td>
+<td align="center">106</td>
+<td align="center">75</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Merry</td>
+<td align="center">443</td>
+<td align="center">414</td>
+<td align="center">956</td>
+<td align="center">496</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Harry</td>
+<td align="center">235</td>
+<td align="center">860</td>
+<td align="center">230</td>
+<td align="center">211</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">John</td>
+<td align="center">800</td>
+<td align="center">604</td>
+<td align="center">245</td>
+<td align="center">659</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Bob</td>
+<td align="center">693</td>
+<td align="center">558</td>
+<td align="center">761</td>
+<td align="center">266</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Michael</td>
+<td align="center">532</td>
+<td align="center">577</td>
+<td align="center">504</td>
+<td align="center">381</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">Alice</td>
+<td align="center">703</td>
+<td align="center">118</td>
+<td align="center">867</td>
+<td align="center">707</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">Merry</td>
+<td align="center">253</td>
+<td align="center">861</td>
+<td align="center">240</td>
+<td align="center">334</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">Harry</td>
+<td align="center">585</td>
+<td align="center">288</td>
+<td align="center">361</td>
+<td align="center">135</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">John</td>
+<td align="center">828</td>
+<td align="center">974</td>
+<td align="center">814</td>
+<td align="center">811</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">Bob</td>
+<td align="center">730</td>
+<td align="center">781</td>
+<td align="center">13</td>
+<td align="center">693</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">Michael</td>
+<td align="center">274</td>
+<td align="center">3</td>
+<td align="center">521</td>
+<td align="center">624</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">Alice</td>
+<td align="center">437</td>
+<td align="center">587</td>
+<td align="center">476</td>
+<td align="center">683</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="center">John</td>
+<td align="center">494</td>
+<td align="center">936</td>
+<td align="center">475</td>
+<td align="center">396</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="center">Bob</td>
+<td align="center">390</td>
+<td align="center">535</td>
+<td align="center">506</td>
+<td align="center">874</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">Michael</td>
+<td align="center">892</td>
+<td align="center">70</td>
+<td align="center">203</td>
+<td align="center">417</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center">Alice</td>
+<td align="center">510</td>
+<td align="center">464</td>
+<td align="center">510</td>
+<td align="center">70</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">all</span>())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>,as_index=<span class="literal">False</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">all</span>())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>,sort=<span class="literal">False</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">all</span>())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">0    1     John     285      53     863     853</span><br><span class="line">1    2      Bob     349     568      33     322</span><br><span class="line">2    3  Michael     886     840      91     726</span><br><span class="line">3    4    Alice      67     752     106      75</span><br><span class="line">4    5    Merry     443     414     956     496</span><br><span class="line">5    6    Harry     235     860     230     211</span><br><span class="line">6    7     John     800     604     245     659</span><br><span class="line">7    8      Bob     693     558     761     266</span><br><span class="line">8    9  Michael     532     577     504     381</span><br><span class="line">9   10    Alice     703     118     867     707</span><br><span class="line">10  11    Merry     253     861     240     334</span><br><span class="line">11  12    Harry     585     288     361     135</span><br><span class="line">12  13     John     828     974     814     811</span><br><span class="line">13  14      Bob     730     781      13     693</span><br><span class="line">14  15  Michael     274       3     521     624</span><br><span class="line">15  16    Alice     437     587     476     683</span><br><span class="line">16  17     John     494     936     475     396</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br><span class="line"></span><br><span class="line">&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001ECA31A79D0&gt;</span><br><span class="line"></span><br><span class="line">           ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice    True    True    True    True    True</span><br><span class="line">Bob      True    True    True    True    True</span><br><span class="line">Harry    True    True    True    True    True</span><br><span class="line">John     True    True    True    True    True</span><br><span class="line">Merry    True    True    True    True    True</span><br><span class="line">Michael  True    True    True    True    True</span><br><span class="line"></span><br><span class="line">      name    ID  data01  data02  data03  data04</span><br><span class="line">0    Alice  True    True    True    True    True</span><br><span class="line">1      Bob  True    True    True    True    True</span><br><span class="line">2    Harry  True    True    True    True    True</span><br><span class="line">3     John  True    True    True    True    True</span><br><span class="line">4    Merry  True    True    True    True    True</span><br><span class="line">5  Michael  True    True    True    True    True</span><br><span class="line"></span><br><span class="line">           ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">John     True    True    True    True    True</span><br><span class="line">Bob      True    True    True    True    True</span><br><span class="line">Michael  True    True    True    True    True</span><br><span class="line">Alice    True    True    True    True    True</span><br><span class="line">Merry    True    True    True    True    True</span><br><span class="line">Harry    True    True    True    True    True</span><br></pre></td></tr></table></figure>
+
+<h4 id="count"><a href="#count" class="headerlink" title=".count()"></a>.count()</h4><p>返回每个群组内项目的计数</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.count())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">         ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice     4       4       4       4       4</span><br><span class="line">Bob       4       4       4       4       4</span><br><span class="line">Harry     2       2       2       2       2</span><br><span class="line">John      4       4       4       4       4</span><br><span class="line">Merry     2       2       2       2       2</span><br><span class="line">Michael   4       4       4       4       4</span><br></pre></td></tr></table></figure>
+
+<h4 id="max-numeric-only-False"><a href="#max-numeric-only-False" class="headerlink" title=".max(numeric_only&#x3D;False)"></a>.max(numeric_only&#x3D;False)</h4><p>计算每个群组中的最大值</p>
+<p>注意： <code>numeric_only=False</code>在教科书版本中默认为<code>True</code>，这个选项若为<code>False</code>会使非整形和浮点型条目报错！！！<br>以下<code>.min()</code>、<code>.mean()</code>、<code>.sum()</code>同理.</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">max</span>())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">         ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice    20     703     752     867     707</span><br><span class="line">Bob      18     730     781     761     874</span><br><span class="line">Harry    12     585     860     361     211</span><br><span class="line">John     17     828     974     863     853</span><br><span class="line">Merry    11     443     861     956     496</span><br><span class="line">Michael  19     892     840     521     726</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="min-numeric-only-False"><a href="#min-numeric-only-False" class="headerlink" title=".min(numeric_only&#x3D;False)"></a>.min(numeric_only&#x3D;False)</h4><p>计算每个群组中的最小值</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">min</span>())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">         ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice     4      67     118     106      70</span><br><span class="line">Bob       2     349     535      13     266</span><br><span class="line">Harry     6     235     288     230     135</span><br><span class="line">John      1     285      53     245     396</span><br><span class="line">Merry     5     253     414     240     334</span><br><span class="line">Michael   3     274       3      91     381</span><br></pre></td></tr></table></figure>
+
+<h4 id="mean-numeric-only-False"><a href="#mean-numeric-only-False" class="headerlink" title=".mean(numeric_only&#x3D;False)"></a>.mean(numeric_only&#x3D;False)</h4><p>计算每个群组中数据的平均数</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.mean())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">           ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice    12.5  429.25  480.25  489.75  383.75</span><br><span class="line">Bob      10.5  540.50  610.50  328.25  538.75</span><br><span class="line">Harry     9.0  410.00  574.00  295.50  173.00</span><br><span class="line">John      9.5  601.75  641.75  599.25  679.75</span><br><span class="line">Merry     8.0  348.00  637.50  598.00  415.00</span><br><span class="line">Michael  11.5  646.00  372.50  329.75  537.00</span><br></pre></td></tr></table></figure>
+
+<h4 id="sum-numeric-only-False"><a href="#sum-numeric-only-False" class="headerlink" title=".sum(numeric_only&#x3D;False)"></a>.sum(numeric_only&#x3D;False)</h4><p>给每个群组中的数据求和</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.<span class="built_in">sum</span>())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">         ID  data01  data02  data03  data04</span><br><span class="line">name</span><br><span class="line">Alice    50    1717    1921    1959    1535</span><br><span class="line">Bob      42    2162    2442    1313    2155</span><br><span class="line">Harry    18     820    1148     591     346</span><br><span class="line">John     38    2407    2567    2397    2719</span><br><span class="line">Merry    16     696    1275    1196     830</span><br><span class="line">Michael  46    2584    1490    1319    2148</span><br></pre></td></tr></table></figure>
+
+<h4 id="head-n-5"><a href="#head-n-5" class="headerlink" title=".head(n&#x3D;5)"></a>.head(n&#x3D;5)</h4><p>返回每个群组中前<code>n</code>项</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.head(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df_gb.head(n=<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df_gb.head(<span class="number">2</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">   ID     name  data01  data02  data03  data04</span><br><span class="line">0   1     John     285      53     863     853</span><br><span class="line">1   2      Bob     349     568      33     322</span><br><span class="line">2   3  Michael     886     840      91     726</span><br><span class="line">3   4    Alice      67     752     106      75</span><br><span class="line">4   5    Merry     443     414     956     496</span><br><span class="line">5   6    Harry     235     860     230     211</span><br><span class="line"></span><br><span class="line">   ID     name  data01  data02  data03  data04 </span><br><span class="line">0   1     John     285      53     863     853 </span><br><span class="line">1   2      Bob     349     568      33     322 </span><br><span class="line">2   3  Michael     886     840      91     726 </span><br><span class="line">3   4    Alice      67     752     106      75 </span><br><span class="line">4   5    Merry     443     414     956     496 </span><br><span class="line">5   6    Harry     235     860     230     211 </span><br><span class="line"></span><br><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">0    1     John     285      53     863     853</span><br><span class="line">1    2      Bob     349     568      33     322</span><br><span class="line">2    3  Michael     886     840      91     726</span><br><span class="line">3    4    Alice      67     752     106      75</span><br><span class="line">4    5    Merry     443     414     956     496</span><br><span class="line">5    6    Harry     235     860     230     211</span><br><span class="line">6    7     John     800     604     245     659</span><br><span class="line">7    8      Bob     693     558     761     266</span><br><span class="line">8    9  Michael     532     577     504     381</span><br><span class="line">9   10    Alice     703     118     867     707</span><br><span class="line">10  11    Merry     253     861     240     334</span><br><span class="line">11  12    Harry     585     288     361     135</span><br></pre></td></tr></table></figure>
+
+<h4 id="tail-n-5"><a href="#tail-n-5" class="headerlink" title=".tail(n&#x3D;5)"></a>.tail(n&#x3D;5)</h4><p>返回每个群组中后<code>n</code>项</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">df_gb = df.groupby(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df_gb.tail(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df_gb.tail(n=<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df_gb.tail(<span class="number">2</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">10  11    Merry     253     861     240     334</span><br><span class="line">11  12    Harry     585     288     361     135</span><br><span class="line">16  17     John     494     936     475     396</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br><span class="line"></span><br><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">10  11    Merry     253     861     240     334</span><br><span class="line">11  12    Harry     585     288     361     135</span><br><span class="line">16  17     John     494     936     475     396</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br><span class="line"></span><br><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">4    5    Merry     443     414     956     496</span><br><span class="line">5    6    Harry     235     860     230     211</span><br><span class="line">10  11    Merry     253     861     240     334</span><br><span class="line">11  12    Harry     585     288     361     135</span><br><span class="line">12  13     John     828     974     814     811</span><br><span class="line">13  14      Bob     730     781      13     693</span><br><span class="line">14  15  Michael     274       3     521     624</span><br><span class="line">15  16    Alice     437     587     476     683</span><br><span class="line">16  17     John     494     936     475     396</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br></pre></td></tr></table></figure>
+
+<h3 id="head-n-5-1"><a href="#head-n-5-1" class="headerlink" title=".head(n&#x3D;5)"></a>.head(n&#x3D;5)</h3><p>返回<code>DataFrame</code>的前<code>n</code>项</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.head())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.head(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.head(n=<span class="number">6</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">   ID     name  data01  data02  data03  data04</span><br><span class="line">0   1     John     285      53     863     853</span><br><span class="line">1   2      Bob     349     568      33     322</span><br><span class="line">2   3  Michael     886     840      91     726</span><br><span class="line">3   4    Alice      67     752     106      75</span><br><span class="line">4   5    Merry     443     414     956     496</span><br><span class="line"></span><br><span class="line">   ID     name  data01  data02  data03  data04</span><br><span class="line">0   1     John     285      53     863     853</span><br><span class="line">1   2      Bob     349     568      33     322</span><br><span class="line">2   3  Michael     886     840      91     726</span><br><span class="line"></span><br><span class="line">   ID     name  data01  data02  data03  data04</span><br><span class="line">0   1     John     285      53     863     853</span><br><span class="line">1   2      Bob     349     568      33     322</span><br><span class="line">2   3  Michael     886     840      91     726</span><br><span class="line">3   4    Alice      67     752     106      75</span><br><span class="line">4   5    Merry     443     414     956     496</span><br><span class="line">5   6    Harry     235     860     230     211</span><br></pre></td></tr></table></figure>
+
+<h3 id="tail-n-5-1"><a href="#tail-n-5-1" class="headerlink" title=".tail(n&#x3D;5)"></a>.tail(n&#x3D;5)</h3><p>返回<code>DataFrame</code>的后<code>n</code>项</p>
+<p>return <code>DataFrame</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.tail())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.tail(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">15  16    Alice     437     587     476     683</span><br><span class="line">16  17     John     494     936     475     396</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br><span class="line"></span><br><span class="line">    ID     name  data01  data02  data03  data04</span><br><span class="line">17  18      Bob     390     535     506     874</span><br><span class="line">18  19  Michael     892      70     203     417</span><br><span class="line">19  20    Alice     510     464     510      70</span><br></pre></td></tr></table></figure>
+
+<h3 id="max-axis-0-numeric-only-False"><a href="#max-axis-0-numeric-only-False" class="headerlink" title=".max(axis&#x3D;0, numeric_only&#x3D;False)"></a>.max(axis&#x3D;0, numeric_only&#x3D;False)</h3><p>返回行或列的最大值</p>
+<p>return <code>Series</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.<span class="built_in">max</span>())</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ID             20</span><br><span class="line">name      Michael</span><br><span class="line">data01        892</span><br><span class="line">data02        974</span><br><span class="line">data03        956</span><br><span class="line">data04        874</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<p>对于<code>axis=True</code>我们发现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.<span class="built_in">max</span>(axis=<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;e:\pyCode\pandas\test.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    print(df.max(axis=1))</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py&quot;, line 11646, in max</span><br><span class="line">    return NDFrame.max(self, axis, skipna, numeric_only, **kwargs)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py&quot;, line 11185, in max</span><br><span class="line">    return self._stat_function(</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py&quot;, line 11158, in _stat_function  </span><br><span class="line">    return self._reduce(</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py&quot;, line 10524, in _reduce</span><br><span class="line">    res = df._mgr.reduce(blk_func)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\managers.py&quot;, line 1534, in reduce</span><br><span class="line">    nbs = blk.reduce(func)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\internals\blocks.py&quot;, line 339, in reduce   </span><br><span class="line">    result = func(self.values)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py&quot;, line 10487, in blk_func</span><br><span class="line">    return op(values, axis=axis, skipna=skipna, **kwds)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\nanops.py&quot;, line 158, in f</span><br><span class="line">    result = alt(values, axis=axis, skipna=skipna, **kwds)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\nanops.py&quot;, line 421, in new_func</span><br><span class="line">    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\nanops.py&quot;, line 1094, in reduction</span><br><span class="line">    result = getattr(values, meth)(axis)</span><br><span class="line">  File &quot;C:\Users\pandas_test\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\core\_methods.py&quot;, line 41, in _amax</span><br><span class="line">    return umr_maximum(a, axis, None, out, keepdims, initial, where)</span><br><span class="line">TypeError: &#x27;&gt;=&#x27; not supported between instances of &#x27;int&#x27; and &#x27;str&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>这就是上面说的<code>numeric_only=False</code>造成的<br>我们可以看到错误为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: &#x27;&gt;=&#x27; not supported between instances of &#x27;int&#x27; and &#x27;str&#x27;</span><br></pre></td></tr></table></figure>
+<p>但考试笔试请忽略</p>
+<p>正确的应该是</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.<span class="built_in">max</span>(axis=<span class="number">1</span>, numeric_only=<span class="literal">True</span>))</span><br></pre></td></tr></table></figure>
+<p>这样会默认省掉<code>name</code>这一列</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">0     863</span><br><span class="line">1     568</span><br><span class="line">2     886</span><br><span class="line">3     752</span><br><span class="line">4     956</span><br><span class="line">5     860</span><br><span class="line">6     800</span><br><span class="line">7     761</span><br><span class="line">8     577</span><br><span class="line">9     867</span><br><span class="line">10    861</span><br><span class="line">11    585</span><br><span class="line">12    974</span><br><span class="line">13    781</span><br><span class="line">14    624</span><br><span class="line">15    683</span><br><span class="line">16    936</span><br><span class="line">17    874</span><br><span class="line">18    892</span><br><span class="line">19    510</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="min-axis-0-numeric-only-False"><a href="#min-axis-0-numeric-only-False" class="headerlink" title=".min(axis&#x3D;0, numeric_only&#x3D;False)"></a>.min(axis&#x3D;0, numeric_only&#x3D;False)</h3><p>返回行或列的最小值</p>
+<p>return <code>Series</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.<span class="built_in">min</span>())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.<span class="built_in">min</span>(axis=<span class="number">1</span>,numeric_only=<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">ID            1</span><br><span class="line">name      Alice</span><br><span class="line">data01       67</span><br><span class="line">data02        3</span><br><span class="line">data03       13</span><br><span class="line">data04       70</span><br><span class="line">dtype: object  </span><br><span class="line"></span><br><span class="line">0      1</span><br><span class="line">1      2</span><br><span class="line">2      3</span><br><span class="line">3      4</span><br><span class="line">4      5</span><br><span class="line">5      6</span><br><span class="line">6      7</span><br><span class="line">7      8</span><br><span class="line">8      9</span><br><span class="line">9     10</span><br><span class="line">10    11</span><br><span class="line">11    12</span><br><span class="line">12    13</span><br><span class="line">13    13</span><br><span class="line">14     3</span><br><span class="line">15    16</span><br><span class="line">16    17</span><br><span class="line">17    18</span><br><span class="line">18    19</span><br><span class="line">19    20</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="mean-axis-0-numeric-only-False"><a href="#mean-axis-0-numeric-only-False" class="headerlink" title=".mean(axis&#x3D;0, numeric_only&#x3D;False)"></a>.mean(axis&#x3D;0, numeric_only&#x3D;False)</h3><p>返回行或列的平均值</p>
+<p>return <code>Series</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.mean(numeric_only=<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.mean(axis=<span class="number">1</span>,numeric_only=<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">ID         10.50</span><br><span class="line">data01    519.30</span><br><span class="line">data02    542.15</span><br><span class="line">data03    438.75</span><br><span class="line">data04    486.65</span><br><span class="line">dtype: float64</span><br><span class="line"></span><br><span class="line">0     411.0</span><br><span class="line">1     254.8</span><br><span class="line">2     509.2</span><br><span class="line">3     200.8</span><br><span class="line">4     462.8</span><br><span class="line">5     308.4</span><br><span class="line">6     463.0</span><br><span class="line">7     457.2</span><br><span class="line">8     400.6</span><br><span class="line">9     481.0</span><br><span class="line">10    339.8</span><br><span class="line">11    276.2</span><br><span class="line">12    688.0</span><br><span class="line">13    446.2</span><br><span class="line">14    287.4</span><br><span class="line">15    439.8</span><br><span class="line">16    463.6</span><br><span class="line">17    464.6</span><br><span class="line">18    320.2</span><br><span class="line">19    314.8</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<h3 id="sum-axis-0-numeric-only-False"><a href="#sum-axis-0-numeric-only-False" class="headerlink" title=".sum(axis&#x3D;0, numeric_only&#x3D;False)"></a>.sum(axis&#x3D;0, numeric_only&#x3D;False)</h3><p>对行或列求和</p>
+<p>return <code>Series</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.<span class="built_in">sum</span>())</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.<span class="built_in">sum</span>(numeric_only=<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(df.<span class="built_in">sum</span>(axis=<span class="number">1</span>,numeric_only=<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">ID                                                      210</span><br><span class="line">name      JohnBobMichaelAliceMerryHarryJohnBobMichaelAli...</span><br><span class="line">data01                                                10386</span><br><span class="line">data02                                                10843</span><br><span class="line">data03                                                 8775</span><br><span class="line">data04                                                 9733</span><br><span class="line">dtype: object</span><br><span class="line"></span><br><span class="line">ID          210</span><br><span class="line">data01    10386</span><br><span class="line">data02    10843</span><br><span class="line">data03     8775</span><br><span class="line">data04     9733</span><br><span class="line">dtype: int64   </span><br><span class="line"></span><br><span class="line">0     2055     </span><br><span class="line">1     1274     </span><br><span class="line">2     2546     </span><br><span class="line">3     1004     </span><br><span class="line">4     2314     </span><br><span class="line">5     1542</span><br><span class="line">6     2315</span><br><span class="line">7     2286</span><br><span class="line">8     2003</span><br><span class="line">9     2405</span><br><span class="line">10    1699</span><br><span class="line">11    1381</span><br><span class="line">12    3440</span><br><span class="line">13    2231</span><br><span class="line">14    1437</span><br><span class="line">15    2199</span><br><span class="line">16    2318</span><br><span class="line">17    2323</span><br><span class="line">18    1601</span><br><span class="line">19    1574</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="to-excel-to-csv-…"><a href="#to-excel-to-csv-…" class="headerlink" title=".to_excel() .to_csv() …"></a>.to_excel() .to_csv() …</h3><p>导出到<code>excel</code>,<code>csv</code>等等</p>
+<p>return <code>.xlsx</code>, <code>.xls</code>, <code>.csv</code>…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.to_excel(<span class="string">&quot;export.xlsx&quot;</span>)</span><br><span class="line">df.to_csv(<span class="string">&quot;export.csv&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/../image/pandas01.png"><br><img src="/../image/pandas02.png"></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/IT/">IT</a><a class="link-muted mr-2" rel="tag" href="/tags/Python/">Python</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/60267.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">DEBUG备忘录</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/51448.html"><span class="level-item">Pause Giant AI Experiments An Open Letter</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#DataFrame"><span class="level-left"><span class="level-item">1</span><span class="level-item">DataFrame</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#读入数据"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">读入数据</span></span></a></li><li><a class="level is-mobile" href="#一些操作"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">一些操作</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#T"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">.T</span></span></a></li><li><a class="level is-mobile" href="#at-index-columns"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">.at[index,columns]</span></span></a></li><li><a class="level is-mobile" href="#columns"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">.columns</span></span></a></li><li><a class="level is-mobile" href="#index"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">.index</span></span></a></li><li><a class="level is-mobile" href="#pop-columns"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">.pop(columns)</span></span></a></li><li><a class="level is-mobile" href="#size"><span class="level-left"><span class="level-item">1.2.6</span><span class="level-item">.size</span></span></a></li><li><a class="level is-mobile" href="#count-axis-0-numeric-only-False"><span class="level-left"><span class="level-item">1.2.7</span><span class="level-item">.count(axis=0, numeric_only=False)</span></span></a></li><li><a class="level is-mobile" href="#drop-labels-None-axis-0-index-None-columns-None"><span class="level-left"><span class="level-item">1.2.8</span><span class="level-item">.drop(labels=None, axis=0, index=None, columns=None)</span></span></a></li><li><a class="level is-mobile" href="#groupby-axis-0-as-index-True-sort-True"><span class="level-left"><span class="level-item">1.2.9</span><span class="level-item">.groupby(axis=0, as_index=True, sort=True)</span></span></a></li><li><a class="level is-mobile" href="#head-n-5-1"><span class="level-left"><span class="level-item">1.2.10</span><span class="level-item">.head(n=5)</span></span></a></li><li><a class="level is-mobile" href="#tail-n-5-1"><span class="level-left"><span class="level-item">1.2.11</span><span class="level-item">.tail(n=5)</span></span></a></li><li><a class="level is-mobile" href="#max-axis-0-numeric-only-False"><span class="level-left"><span class="level-item">1.2.12</span><span class="level-item">.max(axis=0, numeric_only=False)</span></span></a></li><li><a class="level is-mobile" href="#min-axis-0-numeric-only-False"><span class="level-left"><span class="level-item">1.2.13</span><span class="level-item">.min(axis=0, numeric_only=False)</span></span></a></li><li><a class="level is-mobile" href="#mean-axis-0-numeric-only-False"><span class="level-left"><span class="level-item">1.2.14</span><span class="level-item">.mean(axis=0, numeric_only=False)</span></span></a></li><li><a class="level is-mobile" href="#sum-axis-0-numeric-only-False"><span class="level-left"><span class="level-item">1.2.15</span><span class="level-item">.sum(axis=0, numeric_only=False)</span></span></a></li><li><a class="level is-mobile" href="#to-excel-to-csv-…"><span class="level-left"><span class="level-item">1.2.16</span><span class="level-item">.to_excel() .to_csv() …</span></span></a></li></ul></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

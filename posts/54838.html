@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>卡特兰数 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Better_OIer&#039;s Blog"><meta name="msapplication-TileImage" content="image/site_logo_used.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Better_OIer&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Catalan 数列"><meta property="og:type" content="blog"><meta property="og:title" content="卡特兰数"><meta property="og:url" content="http://betteroier.site/posts/54838.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="Catalan 数列"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://betteroier.site/img/og_image.png"><meta property="article:published_time" content="2023-03-15T09:04:56.000Z"><meta property="article:modified_time" content="2023-11-13T08:15:45.867Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="算法"><meta property="article:tag" content="数学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://betteroier.site/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://betteroier.site/posts/54838.html"},"headline":"卡特兰数","image":["http://betteroier.site/img/og_image.png"],"datePublished":"2023-03-15T09:04:56.000Z","dateModified":"2023-11-13T08:15:45.867Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://betteroier.site/posts/image/head_logo.png"}},"description":"Catalan 数列"}</script><link rel="canonical" href="http://betteroier.site/posts/54838.html"><link rel="icon" href="/image/site_logo_used.png"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/6.0.0/css/all.css"><link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.12.0/styles/monokai.css"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/font.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://code.bdstatic.com/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="http://betteroier.site:1000/about">关于</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-15T09:04:56.000Z" title="2023/3/15 17:04:56">2023-03-15</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">卡特兰数</h1><div class="content"><h2 id="Catalan-数列"><a href="#Catalan-数列" class="headerlink" title="Catalan 数列"></a>Catalan 数列</h2><span id="more"></span>
+<p>以下问题属于 Catalan 数列：</p>
+<ol>
+<li>有 $2n$ 个人排成一行进入剧场。入场费 5 元。其中只有 $n$ 个人有一张 5 元钞票，另外 $n$ 人只有 10 元钞票，剧院无其它钞票，问有多少种方法使得只要有 10 元的人买票，售票处就有 5 元的钞票找零？</li>
+<li>一位大城市的律师在她住所以北 $n$ 个街区和以东 $n$ 个街区处工作。每天她走 $2n$ 个街区去上班。如果他从不穿越（但可以碰到）从家到办公室的对角线，那么有多少条可能的道路？</li>
+<li>在圆上选择 $2n$ 个点，将这些点成对连接起来使得所得到的 $n$ 条线段不相交的方法数？</li>
+<li>对角线不相交的情况下，将一个凸多边形区域分成三角形区域的方法数？</li>
+<li>一个栈（无穷大）的进栈序列为 $1,2,3, \cdots ,n$ 有多少个不同的出栈序列？</li>
+<li>$n$ 个结点可构造多少个不同的二叉树？</li>
+<li>$n$ 个 $+1$ 和 $n$ 个 $-1$ 构成 $2n$ 项 $a_1,a_2, \cdots ,a_{2n}$，其部分和满足 $a_1+a_2+ \cdots +a_k \geq 0(k&#x3D;1,2,3, \cdots ,2n)$ 对与 $n$ 该数列为？</li>
+</ol>
+<p>其对应的序列为：</p>
+<table>
+<thead>
+<tr>
+<th align="center">$H_0$</th>
+<th align="center">$H_1$</th>
+<th align="center">$H_2$</th>
+<th align="center">$H_3$</th>
+<th align="center">$H_4$</th>
+<th align="center">$H_5$</th>
+<th align="center">$H_6$</th>
+<th align="center">…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">5</td>
+<td align="center">14</td>
+<td align="center">42</td>
+<td align="center">132</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+<p>(Catalan 数列)</p>
+<h2 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h2><p>该递推关系的解为：</p>
+<p>$$<br>H_n &#x3D; \frac{\binom{2n}{n}}{n+1}(n \geq 2, n \in \mathbf{N_{+}})<br>$$</p>
+<p>关于 Catalan 数的常见公式：</p>
+<p>$$<br>H_n &#x3D; \begin{cases}<br>    \sum_{i&#x3D;1}^{n} H_{i-1} H_{n-i} &amp; n \geq 2, n \in \mathbf{N_{+}}\<br>    1 &amp; n &#x3D; 0, 1<br>\end{cases}<br>$$</p>
+<p>$$<br>H_n &#x3D; \frac{H_{n-1} (4n-2)}{n+1}<br>$$</p>
+<p>$$<br>H_n &#x3D; \binom{2n}{n} - \binom{2n}{n-1}<br>$$</p>
+<p>例题<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1044">洛谷 P1044 栈</a>“<br>题目大意：入栈顺序为 $1,2,\ldots ,n$，求所有可能的出栈顺序的总数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> f[<span class="number">25</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) f[i] = f[i - <span class="number">1</span>] * (<span class="number">4</span> * i - <span class="number">2</span>) / (i + <span class="number">1</span>);</span><br><span class="line">    <span class="comment">// 这里用的是常见公式2</span></span><br><span class="line">    cout &lt;&lt; f[n] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">f = [<span class="number">0</span>] * <span class="number">25</span></span><br><span class="line">f[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">    f[i] = <span class="built_in">int</span>(f[i - <span class="number">1</span>] * (<span class="number">4</span> * i - <span class="number">2</span>) // (i + <span class="number">1</span>))</span><br><span class="line">    <span class="comment"># 这里用的是常见公式2</span></span><br><span class="line"><span class="built_in">print</span>(f[n])</span><br></pre></td></tr></table></figure>
+
+<h2 id="封闭形式"><a href="#封闭形式" class="headerlink" title="封闭形式"></a>封闭形式</h2><p>卡特兰数的递推式为</p>
+<p>$$<br>H_n&#x3D;\sum_{i&#x3D;0}^{n-1}H_{i}H_{n-i-1} \quad (n\ge 2)<br>$$</p>
+<p>其中 $H_0&#x3D;1,H_1&#x3D;1$。设它的普通生成函数为 $H(x)$。</p>
+<p>我们发现卡特兰数的递推式与卷积的形式很相似，因此我们用卷积来构造关于 $H(x)$ 的方程：</p>
+<p>$$<br>\begin{aligned}<br>H(x)&amp;&#x3D;\sum_{n\ge 0}H_nx^n\<br>&amp;&#x3D;1+\sum_{n\ge 1}\sum_{i&#x3D;0}^{n-1}H_ix^iH_{n-i-1}x^{n-i-1}x\<br>&amp;&#x3D;1+x\sum_{i\ge 0}H_{i}x^i\sum_{n\ge 0}H_{n}x^{n}\<br>&amp;&#x3D;1+xH^2(x)<br>\end{aligned}<br>$$</p>
+<p>解得</p>
+<p>$$<br>H(x)&#x3D;\frac{1\pm \sqrt{1-4x}}{2x}<br>$$</p>
+<p>那么这就产生了一个问题：我们应该取哪一个根呢？我们将其分子有理化：</p>
+<p>$$<br>H(x)&#x3D;\frac{2}{1\mp \sqrt{1-4x}}<br>$$</p>
+<p>代入 $x&#x3D;0$，我们得到的是 $H(x)$ 的常数项，也就是 $H_0$。当 $H(x)&#x3D;\dfrac{2}{1+\sqrt{1-4x}}$ 的时候有 $H(0)&#x3D;1$，满足要求。而另一个解会出现分母为 $0$ 的情况（不收敛），舍弃。</p>
+<p>因此我们得到了卡特兰数生成函数的封闭形式：</p>
+<p>$$<br>H(x)&#x3D;\frac{1- \sqrt{1-4x}}{2x}<br>$$</p>
+<p>接下来我们要将其展开。但注意到它的分母不是斐波那契数列那样的多项式形式，因此不方便套用等比数列的展开形式。在这里我们需要使用牛顿二项式定理。我们来先展开 $\sqrt{1-4x}$：</p>
+<p>$$<br>\begin{aligned}<br>(1-4x)^{\frac{1}{2}}<br>&amp;&#x3D;\sum_{n\ge 0}\binom{\frac{1}{2}}{n}(-4x)^n\<br>&amp;&#x3D;1+\sum_{n\ge 1}\frac{\left(\frac{1}{2}\right)^{\underline{n}}}{n!}(-4x)^n<br>\end{aligned} \tag{1}<br>$$</p>
+<p>注意到</p>
+<p>$$<br>\begin{aligned}<br>\left(\frac{1}{2}\right)^{\underline{n}}<br>&amp;&#x3D;\frac{1}{2}\frac{-1}{2}\frac{-3}{2}\cdots\frac{-(2n-3)}{2}\<br>&amp;&#x3D;\frac{(-1)^{n-1}(2n-3)!!}{2^n}\<br>&amp;&#x3D;\frac{(-1)^{n-1}(2n-2)!}{2^n(2n-2)!!}\<br>&amp;&#x3D;\frac{(-1)^{n-1}(2n-2)!}{2^{2n-1}(n-1)!}<br>\end{aligned}<br>$$</p>
+<p>这里使用了双阶乘的化简技巧。那么带回 $(1)$ 得到</p>
+<p>$$<br>\begin{aligned}<br>(1-4x)^{\frac{1}{2}}<br>&amp;&#x3D;1+\sum_{n\ge 1}\frac{(-1)^{n-1}(2n-2)!}{2^{2n-1}(n-1)!n!}(-4x)^n\<br>&amp;&#x3D;1-\sum_{n\ge 1}\frac{(2n-2)!}{(n-1)!n!}2x^n\<br>&amp;&#x3D;1-\sum_{n\ge 1}\binom{2n-1}{n}\frac{1}{(2n-1)}2x^n<br>\end{aligned}<br>$$</p>
+<p>带回原式得到</p>
+<p>$$<br>\begin{aligned}<br>H(x)&amp;&#x3D;\frac{1- \sqrt{1-4x}}{2x}\<br>&amp;&#x3D;\frac{1}{2x}\sum_{n\ge 1}\binom{2n-1}{n}\frac{1}{(2n-1)}2x^n\<br>&amp;&#x3D;\sum_{n\ge 1}\binom{2n-1}{n}\frac{1}{(2n-1)}x^{n-1}\<br>&amp;&#x3D;\sum_{n\ge 0}\binom{2n+1}{n+1}\frac{1}{(2n+1)}x^{n}\<br>&amp;&#x3D;\sum_{n\ge 0}\binom{2n}{n}\frac{1}{n+1}x^{n}\<br>\end{aligned}<br>$$</p>
+<p>这样我们就得到了卡特兰数的通项公式。</p>
+<h2 id="路径计数问题"><a href="#路径计数问题" class="headerlink" title="路径计数问题"></a>路径计数问题</h2><p>非降路径是指只能向上或向右走的路径。</p>
+<ol>
+<li><p>从 $(0,0)$ 到 $(m,n)$ 的非降路径数等于 $m$ 个 $x$ 和 $n$ 个 $y$ 的排列数，即 $\dbinom{n + m}{m}$。</p>
+</li>
+<li><p>从 $(0,0)$ 到 $(n,n)$ 的除端点外不接触直线 $y&#x3D;x$ 的非降路径数：</p>
+<p>先考虑 $y&#x3D;x$ 下方的路径，都是从 $(0, 0)$ 出发，经过 $(1, 0)$ 及 $(n, n-1)$ 到 $(n,n)$，可以看做是 $(1,0)$ 到 $(n,n-1)$ 不接触 $y&#x3D;x$ 的非降路径数。</p>
+<p>所有的的非降路径有 $\dbinom{2n-2}{n-1}$ 条。对于这里面任意一条接触了 $y&#x3D;x$ 的路径，可以把它最后离开这条线的点到 $(1,0)$ 之间的部分关于 $y&#x3D;x$ 对称变换，就得到从 $(0,1)$ 到 $(n,n-1)$ 的一条非降路径。反之也成立。从而 $y&#x3D;x$ 下方的非降路径数是 $\dbinom{2n-2}{n-1} - \dbinom{2n-2}{n}$。根据对称性可知所求答案为 $2\dbinom{2n-2}{n-1} - 2\dbinom{2n-2}{n}$。</p>
+</li>
+<li><p>从 $(0,0)$ 到 $(n,n)$ 的除端点外不穿过直线 $y&#x3D;x$ 的非降路径数：</p>
+<p>用类似的方法可以得到：$\dfrac{2}{n+1}\dbinom{2n}{n}$</p>
+</li>
+</ol>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/55592.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Ubuntu打包zip</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/17749.html"><span class="level-item">求第K小值&amp;中位数法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Catalan-数列"><span class="level-left"><span class="level-item">1</span><span class="level-item">Catalan 数列</span></span></a></li><li><a class="level is-mobile" href="#递推式"><span class="level-left"><span class="level-item">2</span><span class="level-item">递推式</span></span></a></li><li><a class="level is-mobile" href="#封闭形式"><span class="level-left"><span class="level-item">3</span><span class="level-item">封闭形式</span></span></a></li><li><a class="level is-mobile" href="#路径计数问题"><span class="level-left"><span class="level-item">4</span><span class="level-item">路径计数问题</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IT/"><span class="tag">IT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E5%B7%A7/"><span class="tag">技巧</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%AD%E6%96%87/"><span class="tag">语文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/"><span class="tag">题解</span><span class="tag">13</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/image/head_logo.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://code.bdstatic.com/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://code.bdstatic.com/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://code.bdstatic.com/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://code.bdstatic.com/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
