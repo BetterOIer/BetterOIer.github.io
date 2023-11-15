@@ -58,19 +58,3 @@ body {
 .card {
     border-radius: 15px;
 }
-
-/* .widget .tags .tag:first-child {
-    background: #c5a100
-}
-
-a.navbar-item:focus, .navbar-link:focus, a.navbar-item:focus-within, .navbar-link:focus-within, a.navbar-item:hover, .navbar-link:hover, a.navbar-item.is-active, .navbar-link.is-active {
-    color: #c5a100;
-}
-
-a {
-    color: #c5a100;
-}
-.menu-list a.is-active {
-    background-color: #fffbeb;
-    color: #c5a100;
-} */
